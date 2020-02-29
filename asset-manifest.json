@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/dave-kinghorn-me/static/css/main.1eb3b466.chunk.css",
+    "main.js": "/dave-kinghorn-me/static/js/main.3aa70930.chunk.js",
+    "main.js.map": "/dave-kinghorn-me/static/js/main.3aa70930.chunk.js.map",
+    "runtime-main.js": "/dave-kinghorn-me/static/js/runtime-main.09a12f7d.js",
+    "runtime-main.js.map": "/dave-kinghorn-me/static/js/runtime-main.09a12f7d.js.map",
+    "static/css/2.47e06e2e.chunk.css": "/dave-kinghorn-me/static/css/2.47e06e2e.chunk.css",
+    "static/js/2.f6d7e814.chunk.js": "/dave-kinghorn-me/static/js/2.f6d7e814.chunk.js",
+    "static/js/2.f6d7e814.chunk.js.map": "/dave-kinghorn-me/static/js/2.f6d7e814.chunk.js.map",
+    "index.html": "/dave-kinghorn-me/index.html",
+    "precache-manifest.219785887da5b560fca3dd4d50d3b59f.js": "/dave-kinghorn-me/precache-manifest.219785887da5b560fca3dd4d50d3b59f.js",
+    "service-worker.js": "/dave-kinghorn-me/service-worker.js",
+    "static/css/2.47e06e2e.chunk.css.map": "/dave-kinghorn-me/static/css/2.47e06e2e.chunk.css.map",
+    "static/css/main.1eb3b466.chunk.css.map": "/dave-kinghorn-me/static/css/main.1eb3b466.chunk.css.map",
+    "static/js/2.f6d7e814.chunk.js.LICENSE.txt": "/dave-kinghorn-me/static/js/2.f6d7e814.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.09a12f7d.js",
+    "static/css/2.47e06e2e.chunk.css",
+    "static/js/2.f6d7e814.chunk.js",
+    "static/css/main.1eb3b466.chunk.css",
+    "static/js/main.3aa70930.chunk.js"
+  ]
+}

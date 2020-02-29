@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AACA,KACI,WAAY,CACZ,wBACJ,CAEA,gBACI,eAAgB,CAChB,cACJ","file":"main.1eb3b466.chunk.css","sourcesContent":["\nbody {\n    height: 100%;\n    background-color: darkgray;\n}\n\n.carousel-image {\n    max-height: 100%;\n    max-width: 100%;\n}"]}
