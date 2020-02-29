@@ -1,0 +1,10 @@
+
+body {
+    height: 100%;
+    background-color: darkgray;
+}
+
+.carousel-image {
+    max-height: 100%;
+    max-width: 100%;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContectMe = () => (
     <>
-        <h1>Hi I'm Dave</h1>
+        <h1>Yell really really loud and I'll hear.</h1>
     </>
 );
 

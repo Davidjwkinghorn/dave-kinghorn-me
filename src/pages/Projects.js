@@ -2,7 +2,7 @@ import React from 'react';
 
 const Projects = () => (
     <>
-        <h1>Hi I'm Dave</h1>
+        <h1>Projects</h1>
     </>
 );
 
