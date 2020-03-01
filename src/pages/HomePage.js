@@ -6,9 +6,9 @@ const HomePage = () => (
     <>
         <div className="home-carousel">
             <Carousel>
-                <Carousel.Item>
+                <Carousel.Item className="carousel-item">
                     <img
-                        className="d-block w-100"
+                        className="d-block w-100 h-100"
                         id="carousel-image"
                         src={process.env.PUBLIC_URL + '/assets/images/london.jpg'}
                         alt="London Cityscape at night."
@@ -18,9 +18,9 @@ const HomePage = () => (
                         <p>in England.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item className="carousel-item">
                     <img
-                        className="d-block w-100"
+                        className="d-block w-100 h-100"
                         id="carousel-image"
                         src={process.env.PUBLIC_URL + '/assets/images/lexington1.jpg'}
                         alt="Lexington Massachusetts minuteman statue."
@@ -30,9 +30,9 @@ const HomePage = () => (
                         <p>in Lexington Massachusetts.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item className="carousel-item">
                     <img
-                        className="d-block w-100"
+                        className="d-block w-100 h-100"
                         id="carousel-image"
                         src={process.env.PUBLIC_URL + '/assets/images/rit_aerial.jpg'}
                         alt="Rochester Institute of Technology"

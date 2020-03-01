@@ -1,0 +1,15 @@
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+    color: rgba(255,255,255,.5);
+    background-color: #343a40;
+}
+
+.dropdown-divider {
+    background-color: #343a40;
+}
+
+.dropdown-item {
+    color: rgba(255,255,255,.5);
+    background-color: #343a40;
+}
