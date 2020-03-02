@@ -1,5 +1,6 @@
 import React from "react";
 import {Nav, Navbar} from "react-bootstrap";
+import './NavBar.css';
 
 const NavBar = () => (
     <Navbar className="NavBar" bg="dark" variant="dark" expand="lg" sticky={"top"} >

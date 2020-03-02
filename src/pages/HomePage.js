@@ -1,12 +1,12 @@
 import React from 'react';
 import {Carousel} from "react-bootstrap";
-
+import './HomePage.css';
 
 const HomePage = () => (
     <>
         <div className="home-carousel">
             <Carousel>
-                <Carousel.Item>
+                <Carousel.Item className="carousel-item">
                     <img
                         className="d-block w-100"
                         id="carousel-image"
@@ -23,7 +23,7 @@ const HomePage = () => (
                         className="d-block w-100"
                         id="carousel-image"
                         src={process.env.PUBLIC_URL + '/assets/images/lexington1.jpg'}
-                        alt="Lexington Massachusetts minuteman statue."
+                        alt="Lexington Massachusetts Depot Square."
                     />
                     <Carousel.Caption>
                         <h3>Raised</h3>
@@ -34,11 +34,11 @@ const HomePage = () => (
                     <img
                         className="d-block w-100"
                         id="carousel-image"
-                        src={process.env.PUBLIC_URL + '/assets/images/rit_aerial.jpg'}
+                        src={process.env.PUBLIC_URL + '/assets/images/rit.jpg'}
                         alt="Rochester Institute of Technology"
                     />
-                    <Carousel.Caption>
-                        <h3>Studied</h3>
+                    <Carousel.Caption className="carousel-caption">
+                        <h3>Studying</h3>
                         <p>Software Egnineering at the Rochester Institute of Technology.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
