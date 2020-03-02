@@ -14,11 +14,11 @@ class App extends Component {
             <Router>
                 <div className="App">
                     <NavBar/>
-                    <Route path={process.env.PUBLIC_URL + "/"} component={HomePage} exact/>
-                    <Route path={process.env.PUBLIC_URL + "/AboutMe"} component={AboutMe} />
-                    <Route path={process.env.PUBLIC_URL + "/ContactMe"} component={ContactMe} />
-                    <Route path={process.env.PUBLIC_URL + "/Projects"} component={Projects} />
-                    <Route path={process.env.PUBLIC_URL + "/WorkHistory"} component={WorkHistory} />
+                    <Route path={"/"} component={HomePage} exact/>
+                    <Route path={"/AboutMe"} component={AboutMe} />
+                    <Route path={"/ContactMe"} component={ContactMe} />
+                    <Route path={"/Projects"} component={Projects} />
+                    <Route path={"/WorkHistory"} component={WorkHistory} />
                 </div>
             </Router>
         )
