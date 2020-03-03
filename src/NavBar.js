@@ -10,6 +10,7 @@ const NavBar = () => (
             {/*<Nav.Link href={process.env.PUBLIC_URL + "/AboutMe"}>About Me</Nav.Link>*/}
             {/*<Nav.Link href={process.env.PUBLIC_URL + "/WorkHistory"}>Work History</Nav.Link>*/}
             {/*<Nav.Link href={process.env.PUBLIC_URL + "/Projects"}>Projects</Nav.Link>*/}
+            {/*<Nav.Link href={process.env.PUBLIC_URL + "/Publications"}>Publications</Nav.Link>*/}
             <Nav.Link href={process.env.PUBLIC_URL + '/assets/documents/Dave_Whitman-Kinghorn_Resume.pdf'}>Resume</Nav.Link>
             {/*<Nav.Link href={process.env.PUBLIC_URL + "/ContactMe"}>Contact Me</Nav.Link>*/}
         </Nav>

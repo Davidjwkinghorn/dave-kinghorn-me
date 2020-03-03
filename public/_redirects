@@ -1,10 +1,6 @@
 /*    /index.html   200
 
-# *** Warning! Your custom domain is not using HTTPS yet ***
 # These rules will change if you change your site’s custom domains or HTTPS settings
 
-# Redirect domain aliases to primary domain
-http://dave.kinghorn.me/* http://kinghorn.me/:splat 301!
-
-# Optional: Redirect default Netlify subdomain to primary domain
-http://dave-kinghorn-me.netlify.com/* http://kinghorn.me/:splat 301!
+# Redirect default Netlify subdomain to primary domain
+https://dave-kinghorn-me.netlify.com/* https://dave.kinghorn.me/:splat 301!

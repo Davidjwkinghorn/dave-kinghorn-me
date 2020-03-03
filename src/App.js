@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import AboutMe from "./pages/AboutMe";
 import ContactMe from "./pages/ContactMe";
 import Projects from "./pages/Projects";
+import Publications from "./pages/Publications";
 import WorkHistory from "./pages/WorkHistory";
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
                     <Route path={"/AboutMe"} component={AboutMe} />
                     <Route path={"/ContactMe"} component={ContactMe} />
                     <Route path={"/Projects"} component={Projects} />
+                    <Route path={"/Publications"} component={Publications} />
                     <Route path={"/WorkHistory"} component={WorkHistory} />
                 </div>
             </Router>
