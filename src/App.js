@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
+import * as $ from "jquery";
 import NavBar from "./NavBar";
 import HomePage from "./pages/HomePage";
 import AboutMe from "./pages/AboutMe";
@@ -33,8 +34,28 @@ const hash = window.location.hash
 window.location.hash = "";
 
 class App extends Component {
+
+    constructor() {
+        super();
+        this.state = {
+            token: null,
+            item: {
+                album: {
+                    images: [{url: ""}]
+                },
+                name: "",
+                artists: [{name: ""}],
+                duration_ms: 0,
+            },
+            is_playing: "Paused",
+            progress_ms: 0
+        };
+        this.getCurrentlyPlaying = this.getCurrentlyPlaying.bind(this);
+    }
+
     componentDidMount() {
         // Set token
+        console.log(hash);
         let _token = hash.access_token;
         if (_token) {
             // Set token
@@ -44,11 +65,28 @@ class App extends Component {
         }
     }
 
+    getCurrentlyPlaying(token) {
+        // Make a call using the token
+        $.ajax({
+            url: "https://api.spotify.com/v1/me/player",
+            type: "GET",
+            beforeSend: (xhr) => {
+                xhr.setRequestHeader("Authorization", "Bearer " + token);
+            },
+            success: (data) => {
+                this.setState({
+                    item: data.item,
+                    is_playing: data.is_playing,
+                    progress_ms: data.progress_ms,
+                });
+            }
+        });
+    }
+
     render() {
         return (
             <Router>
                 <header className="App-header">
-                    <img src={process.env.PUBLIC_URL + '/favicon.ico'} className="App-logo" alt="logo"/>
                     {!this.state.token && (
                         <a
                             className="btn btn--loginApp-link"
@@ -57,23 +95,22 @@ class App extends Component {
                             Login to Spotify
                         </a>
                     )}
-                    {
-                        this.state.token && (
-                            <Player
-                                item={this.state.item}
-                                is_playing={this.state.is_playing}
-                                progress_ms={this.progress_ms}
-                            />
-                        )
+                    {this.state.token && (
+                        <Player
+                            item={this.state.item}
+                            is_playing={this.state.is_playing}
+                            progress_ms={this.progress_ms}
+                        />
+                    )
                     }
                 </header>
                 <div className="App">
                     <NavBar/>
-                    <Route path={process.env.PUBLIC_URL + "/"} component={HomePage} exact/>
-                    <Route path={process.env.PUBLIC_URL + "/AboutMe"} component={AboutMe}/>
-                    <Route path={process.env.PUBLIC_URL + "/ContactMe"} component={ContactMe}/>
-                    <Route path={process.env.PUBLIC_URL + "/Projects"} component={Projects}/>
-                    <Route path={process.env.PUBLIC_URL + "/WorkHistory"} component={WorkHistory}/>
+                    <Route path={process.env.PUBLIC_URL + "#"} component={HomePage} exact/>
+                    <Route path={process.env.PUBLIC_URL + "#AboutMe"} component={AboutMe}/>
+                    <Route path={process.env.PUBLIC_URL + "#ContactMe"} component={ContactMe}/>
+                    <Route path={process.env.PUBLIC_URL + "#Projects"} component={Projects}/>
+                    <Route path={process.env.PUBLIC_URL + "#WorkHistory"} component={WorkHistory}/>
                 </div>
             </Router>
         )
