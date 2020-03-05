@@ -15,6 +15,10 @@
     /*filter:none !important;*/
 }
 
-h3, p {
+.carousel-caption-p {
+    text-shadow: 0 0 10px black;
+}
+
+.carousel-caption-h3 {
     text-shadow: 0 0 10px black;
 }
