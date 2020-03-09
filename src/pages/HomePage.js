@@ -2,10 +2,18 @@ import React from 'react';
 import {Carousel, Jumbotron} from "react-bootstrap";
 import './HomePage.scss';
 
+/**
+ *
+ */
 class Quote {
     constructor() {
+        /** Parse inline JSON quote. This is a placeholder for quotes pulled from database. */
         var quoteList = JSON.parse('[{"text": "You can never get a cup of tea large enough or a book long enough to suit me.", "author": "C.S. Lewis"}]');
+
+        /** Select a random quote. */
         var quoteId = Math.floor(Math.random() * quoteList.length);
+
+        /** Set attributes of quote. */
         this.text = quoteList[quoteId].text;
         this.author = quoteList[quoteId].author;
     }
