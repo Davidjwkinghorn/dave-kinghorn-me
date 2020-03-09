@@ -1,13 +1,12 @@
 import React from "react";
 import {Nav, Navbar} from "react-bootstrap";
-import './NavBar.css';
+import './NavBar.scss';
 
 const NavBar = () => (
-    <Navbar className="NavBar" bg="dark" variant="dark" expand="lg" sticky={"top"} >
+    <Navbar className="nav-bar" bg="dark" variant="dark" expand="lg" sticky={"top"} >
         <Navbar.Brand href={process.env.PUBLIC_URL + "/"}>Dave Whitman-Kinghorn</Navbar.Brand>
-        <Nav className="nav">
+        <Nav>
             <Nav.Link href={process.env.PUBLIC_URL + "/"}>Home</Nav.Link>
-            {/*<Nav.Link href={process.env.PUBLIC_URL + "/AboutMe"}>About Me</Nav.Link>*/}
             {/*<Nav.Link href={process.env.PUBLIC_URL + "/WorkHistory"}>Work History</Nav.Link>*/}
             {/*<Nav.Link href={process.env.PUBLIC_URL + "/Projects"}>Projects</Nav.Link>*/}
             {/*<Nav.Link href={process.env.PUBLIC_URL + "/Publications"}>Publications</Nav.Link>*/}

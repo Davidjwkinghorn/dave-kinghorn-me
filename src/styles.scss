@@ -1,0 +1,21 @@
+//@import "public/assets/fonts";
+
+// Variables
+
+// Colours
+$darkblue: #00004b;
+$darkgrey: #3c3c3c;
+$grey: grey;
+$lightgrey: lightgrey;
+
+// Fonts
+//@font-face {
+//  font-family: myFirstFont;
+//  src: url(RingbearerMedium-w173.ttf);
+//}
+$defaultFont: "Times New Roman", Times, serif;
+
+body {
+  height: 100%;
+  background-color: $darkgrey;
+}

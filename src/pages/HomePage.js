@@ -1,6 +1,17 @@
 import React from 'react';
-import {Carousel} from "react-bootstrap";
-import './HomePage.css';
+import {Carousel, Jumbotron} from "react-bootstrap";
+import './HomePage.scss';
+
+class Quote {
+    constructor() {
+        var quoteList = JSON.parse('[{"text": "You can never get a cup of tea large enough or a book long enough to suit me.", "author": "C.S. Lewis"}]');
+        var quoteId = Math.floor(Math.random() * quoteList.length);
+        this.text = quoteList[quoteId].text;
+        this.author = quoteList[quoteId].author;
+    }
+}
+
+var quote = new Quote();
 
 const HomePage = () => (
     <>
@@ -38,15 +49,16 @@ const HomePage = () => (
                 />
                 <Carousel.Caption className="carousel-caption">
                     <h3 className="carousel-caption-h3">Studying</h3>
-                    <p className="carousel-caption-p">Software Engineering at the Rochester Institute of Technology.</p>
+                    <p className="carousel-caption-p">Software Engineering at the Rochester Institute of
+                        Technology.</p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
-        {/*<div>*/}
-        {/*    <p>"All that is gold does not glitter,<br/>*/}
-        {/*    Not all those who wander are lost"<br/>*/}
-        {/*        - J.R.R. Tolkien</p>*/}
-        {/*</div>*/}
+        <Jumbotron fluid className="page-quote">
+            <div className="quote-container">
+                <p className="quote">"{quote.text}"<br/>- {quote.author}</p>
+            </div>
+        </Jumbotron>
         {/*<div>*/}
         {/*    <h2>Other text</h2>*/}
         {/*    <p>Paragraph</p>*/}
