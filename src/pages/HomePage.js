@@ -3,7 +3,7 @@ import {Carousel, Jumbotron} from "react-bootstrap";
 import './HomePage.scss';
 
 /**
- *
+ * Quote object representation of a randomly selected quote from the database.
  */
 class Quote {
     constructor() {
