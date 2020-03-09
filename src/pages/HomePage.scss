@@ -1,0 +1,49 @@
+@import "../styles.scss";
+
+#carousel-image {
+    /*height: 900px;*/
+}
+
+#carousel-item {
+    /*height: 900px;*/
+}
+
+#carousel-caption {
+    /*text-shadow: 0 0 5px black;*/
+}
+
+.carousel-control.left, .carousel-control.right {
+    /*background-image:none !important;*/
+    /*filter:none !important;*/
+}
+
+.carousel-caption-p {
+    text-shadow: 0 0 10px black;
+}
+
+.carousel-caption-h3 {
+    text-shadow: 0 0 10px black;
+}
+
+.page-quote {
+    background-color: $darkgrey !important;
+    height: 100%;
+    padding: 100px 20px !important;
+}
+
+.quote-container {
+    display: table;
+    height: 100%;
+    margin: 0 25%;
+}
+
+.quote {
+    font-family: $defaultFont;
+    font-size: 40px;
+    color: $lightgrey;
+    display: table-cell;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
