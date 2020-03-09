@@ -67,10 +67,6 @@ const HomePage = () => (
                 <p className="quote">"{quote.text}"<br/>- {quote.author}</p>
             </div>
         </Jumbotron>
-        {/*<div>*/}
-        {/*    <h2>Other text</h2>*/}
-        {/*    <p>Paragraph</p>*/}
-        {/*</div>*/}
     </>
 );
 
