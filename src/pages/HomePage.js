@@ -1,14 +1,16 @@
 import React from 'react';
-import {Carousel, Jumbotron} from "react-bootstrap";
+import {Carousel, Col, Row, Table} from "react-bootstrap";
 import './HomePage.scss';
+import {Parallax} from "react-scroll-parallax";
+
 
 /**
  * Quote object representation of a randomly selected quote from the database.
  */
 class Quote {
     constructor() {
-        /** Parse inline JSON quote. This is a placeholder for quotes pulled from database. */
-        var quoteList = JSON.parse('[{"text": "You can never get a cup of tea large enough or a book long enough to suit me.", "author": "C.S. Lewis"}]');
+        /** Parse inline JSON quote. This is a placeholder for quotes pulled from database in an update to come. */
+        var quoteList = JSON.parse('[{"text": "You can never get a cup of tea large enough or a book long enough to suit me.", "author": "C.S. Lewis"},{"text": "All you need is love. But a little chocolate now and then doesn\'t hurt.", "author": "Charles M. Schulz"}]');
 
         /** Select a random quote. */
         var quoteId = Math.floor(Math.random() * quoteList.length);
@@ -21,7 +23,7 @@ class Quote {
 
 var quote = new Quote();
 
-const HomePage = () => (
+const HomeCarousel = () => (
     <>
         <Carousel>
             <Carousel.Item className="carousel-item">
@@ -62,12 +64,96 @@ const HomePage = () => (
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
-        <Jumbotron fluid className="page-quote">
-            <div className="quote-container">
-                <p className="quote">"{quote.text}"<br/>- {quote.author}</p>
-            </div>
-        </Jumbotron>
     </>
 );
 
-export default HomePage;
+const HomeQuote = () => (
+    <>
+        <div className="page-quote">
+            <div className="quote-container">
+                <p className="quote">"{quote.text}"<br/>- {quote.author}</p>
+            </div>
+        </div>
+    </>
+);
+
+const HomeAboutMe = () => (
+    <>
+        <h2 className="home-about-me-subtitle">Hello world!</h2>
+        <Table>
+            <Row>
+                <Col>
+                    <h3>Col 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
+                        ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
+                        volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
+                        dictum.</p>
+                </Col>
+                <Col>
+                    <h3>Col 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
+                        ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
+                        volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
+                        dictum.</p>
+                </Col>
+                <Col>
+                    <h3>Col 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
+                        ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
+                        volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
+                        dictum.</p>
+                </Col>
+                <Col>
+                    <h3>Col 4</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
+                        ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
+                        volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
+                        dictum.</p>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <h3>Col 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
+                        ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
+                        volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
+                        dictum.</p>
+                </Col>
+                <Col>
+                    <h3>Col 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
+                        ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
+                        volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
+                        dictum.</p>
+                </Col>
+                <Col>
+                    <h3>Col 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
+                        ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
+                        volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
+                        dictum.</p>
+                </Col>
+            </Row>
+        </Table>
+    </>
+);
+
+export default class HomePage extends React.Component {
+    state = {value: 0, previous: 0};
+
+    render() {
+        return (
+            <>
+                <Parallax className="home-carousel" y={[0, 0]} styles="z-index: 2;">
+                    <HomeCarousel/>
+                </Parallax>
+                <Parallax className="home-quote" y={[0, 0]} styles="z-index: 1;">
+                    <HomeQuote/>
+                </Parallax>
+                <Parallax className="home-about-me" y={[0, 0]} styles="z-index: 2;">
+                    <HomeAboutMe/>
+                </Parallax>
+            </>
+        )
+    }
+}

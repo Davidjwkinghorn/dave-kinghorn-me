@@ -1,9 +1,12 @@
 import React from 'react';
 
-const ContectMe = () => (
-    <>
-        <h1>Yell really really loud and I'll hear.</h1>
-    </>
-);
 
-export default ContectMe;
+export default class ContectMe extends React.Component {
+    render() {
+        return (
+            <>
+                <h1>Yell really really loud and I'll hear.</h1>
+            </>
+        );
+    }
+}

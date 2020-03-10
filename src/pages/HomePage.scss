@@ -1,20 +1,24 @@
 @import "../styles.scss";
 
-#carousel-image {
-    /*height: 900px;*/
-}
-
 #carousel-item {
+    z-index: 3;
     /*height: 900px;*/
 }
 
-#carousel-caption {
-    /*text-shadow: 0 0 5px black;*/
+.home-carousel {
+    z-index: 3 !important;
 }
 
-.carousel-control.left, .carousel-control.right {
-    /*background-image:none !important;*/
-    /*filter:none !important;*/
+.home-quote {
+    z-index: 1 !important;
+    margin: 0 auto !important;
+}
+
+.home-about-me {
+    z-index: 2 !important;
+    margin: 0 auto;
+    padding: 5% 15%;
+    background-color: $lightgrey;
 }
 
 .carousel-caption-p {
@@ -27,14 +31,16 @@
 
 .page-quote {
     background-color: $darkgrey !important;
+    //background-color: transparent !important;
     height: 100%;
+    margin: 0 auto !important;
     padding: 100px 20px !important;
 }
 
 .quote-container {
     display: table;
     height: 100%;
-    margin: 0 25%;
+    margin: 0 15% !important;
 }
 
 .quote {
@@ -42,8 +48,12 @@
     font-size: 40px;
     color: $lightgrey;
     display: table-cell;
-    margin: auto;
+    margin: 0 auto !important;
     text-align: center;
     vertical-align: middle;
 }
 
+.home-about-me-subtitle {
+    text-align: center;
+    margin: 10px 10px 50px 10px;
+}

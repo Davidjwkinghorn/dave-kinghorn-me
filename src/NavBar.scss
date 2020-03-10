@@ -4,8 +4,12 @@ Nav {
   background-color: $darkgrey !important;
 }
 
+.bg-dark {
+  background-color: $darkgrey !important;
+}
+
 .navbar-dark .navbar-brand {
-  color: $lightgrey;
+  color: $lightgrey !important;
 }
 
 .nav-link {
