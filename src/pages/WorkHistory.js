@@ -1,9 +1,12 @@
 import React from 'react';
 
-const WorkHistory = () => (
-    <>
-        <h1>Work</h1>
-    </>
-);
 
-export default WorkHistory;
+export default class WorkHistory extends React.Component {
+    render() {
+        return (
+            <>
+                <h1>Work</h1>
+            </>
+        );
+    }
+}

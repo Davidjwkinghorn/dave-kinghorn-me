@@ -4,7 +4,7 @@
 
 // Colours
 $darkblue: #00004b;
-$darkgrey: #3c3c3c;
+$darkgrey: rgb(52, 58, 64);
 $grey: grey;
 $lightgrey: lightgrey;
 
@@ -18,4 +18,5 @@ $defaultFont: "Times New Roman", Times, serif;
 body {
   height: 100%;
   background-color: $darkgrey;
+  margin: 0 auto !important;
 }

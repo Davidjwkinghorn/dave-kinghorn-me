@@ -7,22 +7,27 @@ import ContactMe from "./pages/ContactMe";
 import Projects from "./pages/Projects";
 import Publications from "./pages/Publications";
 import WorkHistory from "./pages/WorkHistory";
+import {ParallaxProvider} from "react-scroll-parallax";
+import { IconContext } from "react-icons";
 
-class App extends Component {
+
+export default class App extends Component {
     render() {
         return (
-            <Router>
-                <div className="App">
-                    <NavBar/>
-                    <Route exact path={"/"} component={HomePage} />
-                    <Route path={"/ContactMe"} component={ContactMe} />
-                    <Route path={"/Projects"} component={Projects} />
-                    <Route path={"/Publications"} component={Publications} />
-                    <Route path={"/WorkHistory"} component={WorkHistory} />
-                </div>
-            </Router>
+            <ParallaxProvider>
+                <IconContext.Provider value={{ color: "grey", className: "global-icon" }}>
+                    <Router>
+                        <div className="App">
+                            <NavBar/>
+                            <Route exact path={"/"} component={HomePage}/>
+                            <Route path={"/ContactMe"} component={ContactMe}/>
+                            <Route path={"/Projects"} component={Projects}/>
+                            <Route path={"/Publications"} component={Publications}/>
+                            <Route path={"/WorkHistory"} component={WorkHistory}/>
+                        </div>
+                    </Router>
+                </IconContext.Provider>
+            </ParallaxProvider>
         )
     }
 }
-
-export default App;

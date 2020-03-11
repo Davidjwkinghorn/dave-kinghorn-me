@@ -1,9 +1,12 @@
 import React from 'react';
 
-const Projects = () => (
-    <>
-        <h1>Projects</h1>
-    </>
-);
 
-export default Projects;
+export default class Projects extends React.Component {
+    render() {
+        return (
+            <>
+                <h1>Projects</h1>
+            </>
+        );
+    }
+}

@@ -1,9 +1,12 @@
 import React from 'react';
 
-const Publications = () => (
-    <>
-        <h1>Publications</h1>
-    </>
-);
 
-export default Publications;
+export default class Publications extends React.Component {
+    render() {
+        return (
+            <>
+                <h1>Publications</h1>
+            </>
+        );
+    }
+}
