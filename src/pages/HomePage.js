@@ -1,5 +1,5 @@
 import React from 'react';
-import {Carousel, Col, Row, Table} from "react-bootstrap";
+import {Carousel} from "react-bootstrap";
 import './HomePage.scss';
 import {Parallax} from "react-scroll-parallax";
 
@@ -77,66 +77,66 @@ const HomeQuote = () => (
     </>
 );
 
-const HomeAboutMe = () => (
-    <>
-        <h2 className="home-about-me-subtitle">Hello world!</h2>
-        <Table>
-            <Row>
-                <Col>
-                    <h3>Col 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
-                        ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
-                        volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
-                        dictum.</p>
-                </Col>
-                <Col>
-                    <h3>Col 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
-                        ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
-                        volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
-                        dictum.</p>
-                </Col>
-                <Col>
-                    <h3>Col 3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
-                        ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
-                        volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
-                        dictum.</p>
-                </Col>
-                <Col>
-                    <h3>Col 4</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
-                        ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
-                        volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
-                        dictum.</p>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <h3>Col 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
-                        ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
-                        volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
-                        dictum.</p>
-                </Col>
-                <Col>
-                    <h3>Col 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
-                        ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
-                        volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
-                        dictum.</p>
-                </Col>
-                <Col>
-                    <h3>Col 3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
-                        ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
-                        volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
-                        dictum.</p>
-                </Col>
-            </Row>
-        </Table>
-    </>
-);
+// const HomeAboutMe = () => (
+//     <>
+//         <h2 className="home-about-me-subtitle">Hello world!</h2>
+//         <Table>
+//             <Row>
+//                 <Col>
+//                     <h3>Col 1</h3>
+//                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
+//                         ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
+//                         volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
+//                         dictum.</p>
+//                 </Col>
+//                 <Col>
+//                     <h3>Col 2</h3>
+//                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
+//                         ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
+//                         volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
+//                         dictum.</p>
+//                 </Col>
+//                 <Col>
+//                     <h3>Col 3</h3>
+//                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
+//                         ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
+//                         volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
+//                         dictum.</p>
+//                 </Col>
+//                 <Col>
+//                     <h3>Col 4</h3>
+//                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
+//                         ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
+//                         volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
+//                         dictum.</p>
+//                 </Col>
+//             </Row>
+//             <Row>
+//                 <Col>
+//                     <h3>Col 1</h3>
+//                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
+//                         ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
+//                         volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
+//                         dictum.</p>
+//                 </Col>
+//                 <Col>
+//                     <h3>Col 2</h3>
+//                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
+//                         ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
+//                         volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
+//                         dictum.</p>
+//                 </Col>
+//                 <Col>
+//                     <h3>Col 3</h3>
+//                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu diam venenatis, sodales
+//                         ipsum eget, tempus sem. Cras ut ornare orci. Proin elit felis, aliquet aliquet sem in,
+//                         volutpat molestie lectus. Cras ultricies ultrices congue. Pellentesque fringilla rhoncus
+//                         dictum.</p>
+//                 </Col>
+//             </Row>
+//         </Table>
+//     </>
+// );
 
 export default class HomePage extends React.Component {
     state = {value: 0, previous: 0};
@@ -150,9 +150,9 @@ export default class HomePage extends React.Component {
                 <Parallax className="home-quote" y={[0, 0]} styles="z-index: 1;">
                     <HomeQuote/>
                 </Parallax>
-                <Parallax className="home-about-me" y={[0, 0]} styles="z-index: 2;">
-                    <HomeAboutMe/>
-                </Parallax>
+                {/*<Parallax className="home-about-me" y={[0, 0]} styles="z-index: 2;">*/}
+                {/*    <HomeAboutMe/>*/}
+                {/*</Parallax>*/}
             </>
         )
     }
