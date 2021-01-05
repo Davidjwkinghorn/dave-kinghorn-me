@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import ContactMe from "./pages/ContactMe";
 import Projects from "./pages/Projects";
 import Publications from "./pages/Publications";
+import Courses from "./pages/Courses";
 import WorkHistory from "./pages/WorkHistory";
 import {ParallaxProvider} from "react-scroll-parallax";
 import { IconContext } from "react-icons";
@@ -23,6 +24,7 @@ export default class App extends Component {
                             <Route path={"/ContactMe"} component={ContactMe}/>
                             <Route path={"/Projects"} component={Projects}/>
                             <Route path={"/Publications"} component={Publications}/>
+                            <Route path={"/Courses"} component={Courses}/>
                             <Route path={"/WorkHistory"} component={WorkHistory}/>
                         </div>
                     </Router>
