@@ -58,7 +58,7 @@ const HomeCarousel = () => (
                     alt="Rochester Institute of Technology"
                 />
                 <Carousel.Caption className="carousel-caption">
-                    <h3 className="carousel-caption-h3">Studying</h3>
+                    <h3 className="carousel-caption-h3">Studied</h3>
                     <p className="carousel-caption-p">Software Engineering at the Rochester Institute of
                         Technology.</p>
                 </Carousel.Caption>
