@@ -23,23 +23,7 @@ class Quote {
 
 var quote = new Quote();
 
-const HomeCarousel = () => (
-    <>
-        <Carousel>
-            {CarouselItem(process.env.PUBLIC_URL + '/assets/images/london.jpg',
-            "Born", 
-            "in England.")}
-            {CarouselItem(process.env.PUBLIC_URL + '/assets/images/lexington1.jpg',
-            "Raised", 
-            "in Lexington, Massachusetts.")}
-            {CarouselItem(process.env.PUBLIC_URL + '/assets/images/rit.jpg',
-            "Studied", 
-            "Software Engineering at the Rochester Institute of Technology.")}
-        </Carousel>
-    </>
-);
-
-const CarouselItem = (image, caption1, caption2) => (
+const CarouselItem = (image, caption1, caption2, altText) => (
     <Carousel.Item className="carousel-item">
         <img
         className="d-block w-100"
@@ -53,6 +37,25 @@ const CarouselItem = (image, caption1, caption2) => (
         </Carousel.Caption>
         </Carousel.Item>
 )
+
+const HomeCarousel = () => (
+    <>
+        <Carousel>
+            {CarouselItem(process.env.PUBLIC_URL + '/assets/images/london.jpg',
+            "Born", 
+            "in England.", 
+            "London Cityscape at night.")}
+            {CarouselItem(process.env.PUBLIC_URL + '/assets/images/lexington1.jpg',
+            "Raised",
+            "in Lexington, Massachusetts.", 
+            "A sunny day in Lexington, Massachusetts' Depot Square.")}
+            {CarouselItem(process.env.PUBLIC_URL + '/assets/images/rit.jpg',
+            "Studied", 
+            "Software Engineering at the Rochester Institute of Technology.", 
+            "Rochester Institute of Technology")}
+        </Carousel>
+    </>
+);
 
 const HomeQuote = () => (
     <>
