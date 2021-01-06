@@ -23,6 +23,26 @@ class Quote {
 
 var quote = new Quote();
 
+// Database query placeholder
+var carouselDBQuery = {"carouselItems": [
+    {
+        "image": process.env.PUBLIC_URL + '/assets/images/london.jpg',
+        "caption1": "Born",
+        "caption2": "in England.",
+        "altText": "London Cityscape at night."
+    },{
+        "image": process.env.PUBLIC_URL + '/assets/images/lexington1.jpg',
+        "caption1": "Raised",
+        "caption2": "in Lexington, Massachusetts.",
+        "altText": "A sunny day in Lexington, Massachusetts' Depot Square."
+    },{
+        "image": process.env.PUBLIC_URL + '/assets/images/rit.jpg',
+        "caption1": "Studied",
+        "caption2": "Software Engineering at the Rochester Institute of Technology.",
+        "altText": "Rochester Institute of Technology"
+    }
+]}
+
 const CarouselItem = (image, caption1, caption2, altText) => (
     <Carousel.Item className="carousel-item">
         <img
