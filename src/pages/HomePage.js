@@ -29,7 +29,7 @@ const CarouselItem = (image, caption1, caption2, altText) => (
         className="d-block w-100"
         id="carousel-image"
         src={image}
-        alt="London Cityscape at night."
+        alt={altText}
         />
         <Carousel.Caption>
             <h3 className="carousel-caption-h3">{caption1}</h3>
