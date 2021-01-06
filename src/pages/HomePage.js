@@ -43,44 +43,41 @@ var carouselDBQuery = {"carouselItems": [
     }
 ]}
 
-export default class BioCarousel extends React.Component {
-    createCarouselItem(carouselItem) {
-        return <Carousel.Item className="carousel-item">
-            <img
-                className="d-block w-100"
-                id="carousel-image"
-                src={image}
-                alt={altText}
-            />
-            <Carousel.Caption>
-                <h3 className="carousel-caption-h3">{caption1}</h3>
-                <p className="carousel-caption-p">{caption2}.</p>
-            </Carousel.Caption>
-        </Carousel.Item>
-    }
+function costructCarousel(carouselDBQuery) {
+    return <>
+    <Carousel>
+        {CarouselItem(process.env.PUBLIC_URL + '/assets/images/london.jpg',
+        "Born", 
+        "in England.", 
+        "London Cityscape at night.")}
+        {CarouselItem(process.env.PUBLIC_URL + '/assets/images/lexington1.jpg',
+        "Raised",
+        "in Lexington, Massachusetts.", 
+        "A sunny day in Lexington, Massachusetts' Depot Square.")}
+        {CarouselItem(process.env.PUBLIC_URL + '/assets/images/rit.jpg',
+        "Studied", 
+        "Software Engineering at the Rochester Institute of Technology.", 
+        "Rochester Institute of Technology")}
+    </Carousel>
+</>
+}
 
-    costructCarousel(carouselDBQuery) {
-        return <>
-        <Carousel>
-            {CarouselItem(process.env.PUBLIC_URL + '/assets/images/london.jpg',
-            "Born", 
-            "in England.", 
-            "London Cityscape at night.")}
-            {CarouselItem(process.env.PUBLIC_URL + '/assets/images/lexington1.jpg',
-            "Raised",
-            "in Lexington, Massachusetts.", 
-            "A sunny day in Lexington, Massachusetts' Depot Square.")}
-            {CarouselItem(process.env.PUBLIC_URL + '/assets/images/rit.jpg',
-            "Studied", 
-            "Software Engineering at the Rochester Institute of Technology.", 
-            "Rochester Institute of Technology")}
-        </Carousel>
-    </>
-    }
+const BioCarousel = () => {
     
-    render() {
-        return costructCarousel(carouselDBQuery);
-    }
+    // createCarouselItem(carouselItem) {
+    //     return <Carousel.Item className="carousel-item">
+    //         <img
+    //             className="d-block w-100"
+    //             id="carousel-image"
+    //             src={carouselItem["image"]}
+    //             alt={carouselItem["altText"]}
+    //         />
+    //         <Carousel.Caption>
+    //             <h3 className="carousel-caption-h3">{carouselItem["caption1"]}</h3>
+    //             <p className="carousel-caption-p">{carouselItem["caption2"]}.</p>
+    //         </Carousel.Caption>
+    //     </Carousel.Item>
+    // }
 
 }
 
@@ -198,7 +195,7 @@ export default class HomePage extends React.Component {
         return (
             <>
                 <Parallax className="home-carousel" y={[0, 0]} styles="z-index: 2;">
-                    <HomeCarousel/>
+                    {costructCarousel(carouselDBQuery)}
                 </Parallax>
                 <Parallax className="home-quote" y={[0, 0]} styles="z-index: 1;">
                     <HomeQuote/>
