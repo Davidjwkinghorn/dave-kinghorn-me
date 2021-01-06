@@ -26,46 +26,33 @@ var quote = new Quote();
 const HomeCarousel = () => (
     <>
         <Carousel>
-            <Carousel.Item className="carousel-item">
-                <img
-                    className="d-block w-100"
-                    id="carousel-image"
-                    src={process.env.PUBLIC_URL + '/assets/images/london.jpg'}
-                    alt="London Cityscape at night."
-                />
-                <Carousel.Caption>
-                    <h3 className="carousel-caption-h3">Born</h3>
-                    <p className="carousel-caption-p">in England.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    id="carousel-image"
-                    src={process.env.PUBLIC_URL + '/assets/images/lexington1.jpg'}
-                    alt="Lexington Massachusetts Depot Square."
-                />
-                <Carousel.Caption>
-                    <h3 className="carousel-caption-h3">Raised</h3>
-                    <p className="carousel-caption-p">in Lexington Massachusetts.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    id="carousel-image"
-                    src={process.env.PUBLIC_URL + '/assets/images/rit.jpg'}
-                    alt="Rochester Institute of Technology"
-                />
-                <Carousel.Caption className="carousel-caption">
-                    <h3 className="carousel-caption-h3">Studied</h3>
-                    <p className="carousel-caption-p">Software Engineering at the Rochester Institute of
-                        Technology.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
+            {CarouselItem(process.env.PUBLIC_URL + '/assets/images/london.jpg',
+            "Born", 
+            "in England.")}
+            {CarouselItem(process.env.PUBLIC_URL + '/assets/images/lexington1.jpg',
+            "Raised", 
+            "in Lexington, Massachusetts.")}
+            {CarouselItem(process.env.PUBLIC_URL + '/assets/images/rit.jpg',
+            "Studied", 
+            "Software Engineering at the Rochester Institute of Technology.")}
         </Carousel>
     </>
 );
+
+const CarouselItem = (image, caption1, caption2) => (
+    <Carousel.Item className="carousel-item">
+        <img
+        className="d-block w-100"
+        id="carousel-image"
+        src={image}
+        alt="London Cityscape at night."
+        />
+        <Carousel.Caption>
+            <h3 className="carousel-caption-h3">{caption1}</h3>
+            <p className="carousel-caption-p">{caption2}.</p>
+        </Carousel.Caption>
+        </Carousel.Item>
+)
 
 const HomeQuote = () => (
     <>
