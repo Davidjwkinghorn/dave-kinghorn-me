@@ -23,99 +23,61 @@ class Quote {
 
 var quote = new Quote();
 
-// Database query placeholder
-var carouselDBQuery = {"carouselItems": [
-    {
-        "image": process.env.PUBLIC_URL + '/assets/images/london.jpg',
-        "caption1": "Born",
-        "caption2": "in England.",
-        "altText": "London Cityscape at night."
-    },{
-        "image": process.env.PUBLIC_URL + '/assets/images/lexington1.jpg',
-        "caption1": "Raised",
-        "caption2": "in Lexington, Massachusetts.",
-        "altText": "A sunny day in Lexington, Massachusetts' Depot Square."
-    },{
-        "image": process.env.PUBLIC_URL + '/assets/images/rit.jpg',
-        "caption1": "Studied",
-        "caption2": "Software Engineering at the Rochester Institute of Technology.",
-        "altText": "Rochester Institute of Technology"
+class HomeCarousel extends React.Component {
+    constructor() {
+        super()
+
+        // Database query placeholder
+        this.carouselDBQuery = {"carouselItems": [
+            {
+                "image": process.env.PUBLIC_URL + '/assets/images/london.jpg',
+                "caption1": "Born",
+                "caption2": "in England.",
+                "altText": "London Cityscape at night."
+            },{
+                "image": process.env.PUBLIC_URL + '/assets/images/lexington1.jpg',
+                "caption1": "Raised",
+                "caption2": "in Lexington, Massachusetts.",
+                "altText": "A sunny day in Lexington, Massachusetts' Depot Square."
+            },{
+                "image": process.env.PUBLIC_URL + '/assets/images/rit.jpg',
+                "caption1": "Studied",
+                "caption2": "Software Engineering at the Rochester Institute of Technology.",
+                "altText": "Rochester Institute of Technology"
+            }
+        ]};
     }
-]}
-
-function costructCarousel(carouselDBQuery) {
-    return <>
-    <Carousel>
-        {CarouselItem(process.env.PUBLIC_URL + '/assets/images/london.jpg',
-        "Born", 
-        "in England.", 
-        "London Cityscape at night.")}
-        {CarouselItem(process.env.PUBLIC_URL + '/assets/images/lexington1.jpg',
-        "Raised",
-        "in Lexington, Massachusetts.", 
-        "A sunny day in Lexington, Massachusetts' Depot Square.")}
-        {CarouselItem(process.env.PUBLIC_URL + '/assets/images/rit.jpg',
-        "Studied", 
-        "Software Engineering at the Rochester Institute of Technology.", 
-        "Rochester Institute of Technology")}
-    </Carousel>
-</>
-}
-
-const BioCarousel = () => {
     
-    // createCarouselItem(carouselItem) {
-    //     return <Carousel.Item className="carousel-item">
-    //         <img
-    //             className="d-block w-100"
-    //             id="carousel-image"
-    //             src={carouselItem["image"]}
-    //             alt={carouselItem["altText"]}
-    //         />
-    //         <Carousel.Caption>
-    //             <h3 className="carousel-caption-h3">{carouselItem["caption1"]}</h3>
-    //             <p className="carousel-caption-p">{carouselItem["caption2"]}.</p>
-    //         </Carousel.Caption>
-    //     </Carousel.Item>
-    // }
+    createCarouselItem(carouselItem) {
+        return (
+            <Carousel.Item className="carousel-item">
+                <img
+                    className="d-block w-100"
+                    id="carousel-image"
+                    src={carouselItem["image"]}
+                    alt={carouselItem["altText"]}
+                />
+                <Carousel.Caption>
+                    <h3 className="carousel-caption-h3">{carouselItem["caption1"]}</h3>
+                    <p className="carousel-caption-p">{carouselItem["caption2"]}.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            );
+    }
 
-}
+    createCarousel() {
+        return (
+            <Carousel>
+                {this.carouselDBQuery.carouselItems.map((image, caption1, caption2, altText) => this.createCarouselItem(image, caption1, caption2, altText))}
+            </Carousel>
+        );
+    }
 
+    render () {
+        return this.createCarousel();
+    }
 
-
-const CarouselItem = (image, caption1, caption2, altText) => (
-    <Carousel.Item className="carousel-item">
-        <img
-        className="d-block w-100"
-        id="carousel-image"
-        src={image}
-        alt={altText}
-        />
-        <Carousel.Caption>
-            <h3 className="carousel-caption-h3">{caption1}</h3>
-            <p className="carousel-caption-p">{caption2}.</p>
-        </Carousel.Caption>
-        </Carousel.Item>
-)
-
-const HomeCarousel = () => (
-    <>
-        <Carousel>
-            {CarouselItem(process.env.PUBLIC_URL + '/assets/images/london.jpg',
-            "Born", 
-            "in England.", 
-            "London Cityscape at night.")}
-            {CarouselItem(process.env.PUBLIC_URL + '/assets/images/lexington1.jpg',
-            "Raised",
-            "in Lexington, Massachusetts.", 
-            "A sunny day in Lexington, Massachusetts' Depot Square.")}
-            {CarouselItem(process.env.PUBLIC_URL + '/assets/images/rit.jpg',
-            "Studied", 
-            "Software Engineering at the Rochester Institute of Technology.", 
-            "Rochester Institute of Technology")}
-        </Carousel>
-    </>
-);
+} 
 
 const HomeQuote = () => (
     <>
@@ -188,6 +150,7 @@ const HomeQuote = () => (
 //     </>
 // );
 
+
 export default class HomePage extends React.Component {
     state = {value: 0, previous: 0};
 
@@ -195,7 +158,7 @@ export default class HomePage extends React.Component {
         return (
             <>
                 <Parallax className="home-carousel" y={[0, 0]} styles="z-index: 2;">
-                    {costructCarousel(carouselDBQuery)}
+                    <HomeCarousel/>
                 </Parallax>
                 <Parallax className="home-quote" y={[0, 0]} styles="z-index: 1;">
                     <HomeQuote/>
