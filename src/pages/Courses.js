@@ -1,10 +1,90 @@
 import React from 'react';
+import { Card, Col, Row } from 'react-bootstrap';
 import './Courses.scss';
 
 
-class CollapsibleSection extends React.Component {
+class GenericCollapsibleSection extends React.Component {
 
     constructor (props) {
+        super(props);
+
+        this.state = {
+            open:false
+        }
+        this.togglePanel = this.togglePanel.bind(this);
+    }
+
+    togglePanel(e) {
+        this.setState({open: !this.state.open})
+    }
+
+    render() {
+        return (
+        <div>
+            <div onClick={(e)=>this.togglePanel(e)} className='header'>
+                {this.props.title}
+            </div>
+            {this.state.open? (
+                <div className='content'>
+                    {this.props.children}
+                </div>
+            ):null}
+        </div>);
+    }
+}
+
+class CourseSection extends React.Component {
+
+    constructor (props) {
+        super(props);
+
+        this.title = props.title;
+        this.children = props.children;
+
+        this.state = {
+            open:false
+        }
+        this.togglePanel = this.togglePanel.bind(this);
+
+        this.coursesDBQuery = props.coursesDBQuery;
+    }
+
+    togglePanel(e) {
+        this.setState({open: !this.state.open})
+    }
+
+    createCard(courseData) {
+        // TODO: select card background color based on course department.
+        return (
+            <>
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src={courseData["icon"]}/>
+                        <Card.Body>
+                            <Card.Title>{courseData["title"]}</Card.Title>
+                            <GenericCollapsibleSection title="Read more...">
+                                <Card.Subtitle>
+                                    {courseData["department"]-courseData["number"]}
+                                </Card.Subtitle>
+                                <Card.Text>
+                                    {courseData["description"]}
+                                </Card.Text>
+                            </GenericCollapsibleSection>
+                        </Card.Body>
+                </Card>
+            </>
+        );
+    }
+
+    render() {
+        return (
+        <GenericCollapsibleSection title={this.title} children={this.children}>
+            {this.coursesDBQuery["courses"].map((courseData) => this.createCard(courseData))}
+        </GenericCollapsibleSection>);
+    }
+}
+
+export default class Courses extends React.Component {
+    constructor(props) {
         super(props);
 
         // Placeholder for database query
@@ -25,15 +105,15 @@ class CollapsibleSection extends React.Component {
                 "category": "Core Classes"
             },{
                 "title": "Air Force Research Lab Co-op",
-                "department": "",
-                "number": "null",
+                "department": null,
+                "number": null,
                 "icon": "",
                 "description": "January-August 2019",
                 "category": "Core Classes"
             },{
                 "title": "SciAps Co-op",
-                "department": "",
-                "number": "",
+                "department": null,
+                "number": null,
                 "icon": "",
                 "description": "May-August 2018",
                 "category": "Core Classes"
@@ -339,43 +419,30 @@ class CollapsibleSection extends React.Component {
                 "description": "",
                 "category": "Wellness"
             }
-        ]}
+        ]};
 
-        this.state = {
-            open:false
-        }
-        this.togglePanel = this.togglePanel.bind(this);
-    }
-
-    togglePanel(e) {
-        this.setState({open: !this.state.open})
-    }
-
-    render() {
-        return (
-        <div>
-            <div onClick={(e)=>this.togglePanel(e)} className='header'>
-                Text
-                {this.props.title}
-            </div>
-            {this.state.open? (
-                <div className='content'>
-                    More
-                    {this.props.children}
-                </div>
-            ):null}
-        </div>);
-    }
-}
-
-export default class Courses extends React.Component {
-    constructor(props) {
-        super(props);
+        // TODO Filter courses by category
     }
     render() {
         return (
             <>
-                <CollapsibleSection/>
+                <Col>
+                    <Row>
+                        <CourseSection title="Core Courses" togglePanel="true" coursesDBQuery={this.coursesDBQuery}>
+                            
+                        </CourseSection>
+                    </Row>
+                    <Row>
+                        <CourseSection title="Foundation Courses" togglePanel="true" coursesDBQuery={this.coursesDBQuery}>
+                            
+                        </CourseSection>
+                    </Row>
+                    <Row>
+                        <CourseSection title="MISC Courses" togglePanel="true" coursesDBQuery={this.coursesDBQuery}>
+                            
+                        </CourseSection>
+                    </Row>
+                </Col>
             </>
         );
     }

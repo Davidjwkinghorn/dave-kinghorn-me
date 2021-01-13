@@ -77,7 +77,7 @@ class HomeCarousel extends React.Component {
     createCarousel() {
         return (
             <Carousel>
-                {this.carouselDBQuery.carouselItems.map((image, caption1, caption2, altText) => this.createCarouselItem(image, caption1, caption2, altText))}
+                {this.carouselDBQuery.carouselItems.map((carouselItem) => this.createCarouselItem(carouselItem))}
             </Carousel>
         );
     }
