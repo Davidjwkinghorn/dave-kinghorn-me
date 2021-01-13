@@ -27,8 +27,17 @@ class HomeCarousel extends React.Component {
     constructor() {
         super()
 
+        this.carouselDBQuerySchema = {
+            "carouselItems": [ {
+                "image": {"$type": "string"},
+                "caption1": {"$type": "string"},
+                "caption2": {"$type": "string"},
+                "altText": {"$type": "string"}
+            }]
+        }
         // Database query placeholder
-        this.carouselDBQuery = {"carouselItems": [
+        this.carouselDBQuery = {
+            "carouselItems": [
             {
                 "image": process.env.PUBLIC_URL + '/assets/images/london.jpg',
                 "caption1": "Born",
