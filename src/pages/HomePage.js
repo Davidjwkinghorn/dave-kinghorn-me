@@ -9,13 +9,13 @@ import {Parallax} from "react-scroll-parallax";
  */
 class Quote {
     constructor() {
-        /** Parse inline JSON quote. This is a placeholder for quotes pulled from database in an update to come. */
+        // Parse inline JSON quote. This is a placeholder for quotes pulled from database in an update to come.
         var quoteList = JSON.parse('[{"text": "You can never get a cup of tea large enough or a book long enough to suit me.", "author": "C.S. Lewis"},{"text": "All you need is love. But a little chocolate now and then doesn\'t hurt.", "author": "Charles M. Schulz"}]');
 
-        /** Select a random quote. */
+        // Select a random quote.
         var quoteId = Math.floor(Math.random() * quoteList.length);
 
-        /** Set attributes of quote. */
+        // Set attributes of quote.
         this.text = quoteList[quoteId].text;
         this.author = quoteList[quoteId].author;
     }
