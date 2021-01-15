@@ -17,6 +17,6 @@ $defaultFont: "Times New Roman", Times, serif;
 
 body {
   height: 100%;
-  background-color: $darkgrey;
+  background-color: $darkgrey !important;
   margin: 0 auto !important;
 }
