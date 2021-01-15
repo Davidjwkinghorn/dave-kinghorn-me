@@ -1,12 +1,16 @@
-.header{
+#element.style{
+    background-color:blue;
+  }
+
+.generic-header{
     cursor: pointer;
-    border: solid 1px #f2f2f2;
+    background-color: lightgray;
     padding: 15px;
-    background-color: #0089CC;
-    color: #FFF;
+    color: black;
     font-family: verdana;
-    }
-    .content{
+}
+
+.content{
     cursor: pointer;
     border-left: solid 1px #f2f2f2;
     border-right: solid 1px #f2f2f2;
@@ -16,4 +20,7 @@
     font-family: verdana;
     font-size: 14px;
 }
-    
+
+.card-body{
+    background-color:blue;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
+import { Switch } from 'react-router-dom';
 import './Courses.scss';
 
 
@@ -21,7 +22,7 @@ class GenericCollapsibleSection extends React.Component {
     render() {
         return (
         <div>
-            <div onClick={(e)=>this.togglePanel(e)} className='header'>
+            <div onClick={(e)=>this.togglePanel(e)} className='generic-header'>
                 {this.props.title}
             </div>
             {this.state.open? (
@@ -47,31 +48,59 @@ class CourseSection extends React.Component {
         this.togglePanel = this.togglePanel.bind(this);
 
         this.coursesDBQuery = props.coursesDBQuery;
+
+        this.colorCode = {
+            "SWEN": "blue",
+            "CSCI": "blue",
+            "PHYS": "blue",
+            "MATH": "blue",
+            "STAT": "blue",
+            "MGMT": "blue",
+            "STSO": "blue",
+            "ENVS": "blue",
+            "HIST": "blue",
+            "PSYC": "blue",
+            "FNRT": "blue",
+            "SOCI": "blue",
+            "COMM": "blue",
+            "UWRT": "blue",
+            "WFIT": "blue",
+            "WMAR": "blue",
+            "WHWS": "blue"
+        }
     }
 
     togglePanel(e) {
-        this.setState({open: !this.state.open})
+        this.setState({open: !this.state.open});
     }
 
     createCard(courseData) {
+        const key = courseData["department"] + "-" + courseData["number"];
         // TODO: select card background color based on course department.
+        var backgroundColor;
+        if (courseData["department"] in this.colorCode) {
+            backgroundColor = this.colorCode[courseData["department"]];
+        } else {
+            backgroundColor = "blue";
+        }
+
+        backgroundColor = "background-color:" + backgroundColor;
+
         return (
-            <>
-                <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={courseData["icon"]}/>
-                        <Card.Body>
-                            <Card.Title>{courseData["title"]}</Card.Title>
-                            <GenericCollapsibleSection title="Read more...">
-                                <Card.Subtitle>
-                                    {courseData["department"]-courseData["number"]}
-                                </Card.Subtitle>
-                                <Card.Text>
-                                    {courseData["description"]}
-                                </Card.Text>
-                            </GenericCollapsibleSection>
-                        </Card.Body>
-                </Card>
-            </>
+            <Card className="course-card" style={{backgroundColor}} key={key}>
+                <Card.Img variant="top" src={courseData["icon"]}/>
+                <Card.Body>
+                    <Card.Title>{courseData["title"]}</Card.Title>
+                    <GenericCollapsibleSection title="Read more...">
+                        <Card.Subtitle>
+                            {courseData["department"]-courseData["number"]}
+                        </Card.Subtitle>
+                        <Card.Text>
+                            {courseData["description"]}
+                        </Card.Text>
+                    </GenericCollapsibleSection>
+                </Card.Body>
+            </Card>
         );
     }
 
@@ -105,15 +134,15 @@ export default class Courses extends React.Component {
                 "category": "Core Classes"
             },{
                 "title": "Air Force Research Lab Co-op",
-                "department": null,
-                "number": null,
+                "department": "January-August",
+                "number": "2019",
                 "icon": "",
                 "description": "January-August 2019",
                 "category": "Core Classes"
             },{
                 "title": "SciAps Co-op",
-                "department": null,
-                "number": null,
+                "department": "May-August",
+                "number": "2018",
                 "icon": "",
                 "description": "May-August 2018",
                 "category": "Core Classes"
