@@ -27,7 +27,7 @@ export default class App extends Component {
                                 <Route path={"/Publications"} component={Publications}/>
                                 <Route path={"/WorkHistory"} component={WorkHistory}/>
                             </div>
-                            <div class="d-flex flex-column">
+                            {/* <div class="d-flex flex-column">
                                 <footer class="footer">
                                     <Container>
                                         <Row>
@@ -46,7 +46,7 @@ export default class App extends Component {
                                         </Row>
                                     </Container>
                                 </footer>
-                            </div>
+                            </div> */}
                         </div>
                     </Router>
                 </IconContext.Provider>
