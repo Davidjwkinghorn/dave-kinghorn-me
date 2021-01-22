@@ -27,9 +27,14 @@ export default class App extends Component {
                                 <Route path={"/Publications"} component={Publications}/>
                                 <Route path={"/WorkHistory"} component={WorkHistory}/>
                             </div>
-                            {/* <div class="d-flex flex-column">
+                            <div class="d-flex flex-column">
                                 <footer class="footer">
                                     <Container>
+                                        <Row>
+                                            <Col>
+                                                <h1>Site map</h1>
+                                            </Col>
+                                        </Row>
                                         <Row>
                                             <Col>
                                                 <p>Col 1</p>
@@ -44,9 +49,29 @@ export default class App extends Component {
                                                 <p>Col 1</p>
                                             </Col>
                                         </Row>
+                                        <Row>
+                                            <Col>
+                                                <p>Social media Links</p>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col>
+                                                <h1>Dave Whitman-Kinghorn</h1>
+                                            </Col>
+                                        </Row>
+                                        {/* <Row>
+                                            <Col>
+                                                <p>Copyright 2021 David Whitman-Kinghorn</p>
+                                            </Col>
+                                        </Row> */}
+                                        <Row>
+                                            <Col>
+                                                <p>Credits</p>
+                                            </Col>
+                                        </Row>
                                     </Container>
                                 </footer>
-                            </div> */}
+                            </div>
                         </div>
                     </Router>
                 </IconContext.Provider>
