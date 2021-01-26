@@ -48,7 +48,7 @@ export default class App extends Component {
                                             </Col>
                                             <Col style={{textAlign: "center"}}>
                                                 <Row >
-                                                    <Col><a href="https://davidreact@gmail.com"><i className="social" 
+                                                    <Col><a href="mailto:davidreact@gmail.com?subject=I'd Like to Give You a Job!"><i className="social" 
                                                     style={{background: `url(${process.env.PUBLIC_URL}/assets/icons/iconmonstr-gmail-4-240.png`}}/></a></Col>
                                                     <Col><a href="https://www.linkedin.com/in/davewk/"><i className="social" 
                                                     style={{background: `url(${process.env.PUBLIC_URL}/assets/icons/iconmonstr-linkedin-4-240.png`}}/></a></Col>
