@@ -1,5 +1,4 @@
-//@import "public/assets/fonts";
-
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 // Variables
 
 // Colours
@@ -9,14 +8,24 @@ $grey: grey;
 $lightgrey: lightgrey;
 
 // Fonts
-//@font-face {
-//  font-family: myFirstFont;
-//  src: url(RingbearerMedium-w173.ttf);
-//}
-$defaultFont: "Times New Roman", Times, serif;
+@font-face {
+  font-family: "Roboto", "Open Sans", sans-serif;
+  src: url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+}
+$defaultFont: "Roboto", "Open Sans", sans-serif;
 
 body {
   height: 100%;
-  background-color: $darkgrey;
-  margin: 0 auto !important;
+  background-color: $darkgrey ;
+  margin: 0 auto ;
+  font-family: $defaultFont;
+  color: $lightgrey;
+}
+
+.h1 {
+  color: $lightgrey;
+}
+
+.p {
+  color: $lightgrey;
 }

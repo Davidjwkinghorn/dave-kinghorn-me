@@ -30,8 +30,8 @@ const HomeCarousel = () => (
                 <img
                     className="d-block w-100"
                     id="carousel-image"
-                    src={process.env.PUBLIC_URL + '/assets/images/london.jpg'}
-                    alt="London Cityscape at night."
+                    src={process.env.PUBLIC_URL + '/assets/images/my-photos/20150730_125815_Richtone(HDR).jpg'}
+                    alt="Greater London area countryside from the air."
                 />
                 <Carousel.Caption>
                     <h3 className="carousel-caption-h3">Born</h3>
@@ -42,20 +42,20 @@ const HomeCarousel = () => (
                 <img
                     className="d-block w-100"
                     id="carousel-image"
-                    src={process.env.PUBLIC_URL + '/assets/images/lexington1.jpg'}
-                    alt="Lexington Massachusetts Depot Square."
+                    src={process.env.PUBLIC_URL + '/assets/images/my-photos/20131106_155432.jpg'}
+                    alt="Autum rooftop from the deCordova Sculpture Park Museum."
                 />
                 <Carousel.Caption>
                     <h3 className="carousel-caption-h3">Raised</h3>
-                    <p className="carousel-caption-p">in Lexington Massachusetts.</p>
+                    <p className="carousel-caption-p">in Massachusetts.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img
                     className="d-block w-100"
                     id="carousel-image"
-                    src={process.env.PUBLIC_URL + '/assets/images/rit.jpg'}
-                    alt="Rochester Institute of Technology"
+                    src={process.env.PUBLIC_URL + '/assets/images/my-photos/IMG_20160316_192059.jpg'}
+                    alt="Rochester Institute of Technology Gene Polisseni Center at sunset"
                 />
                 <Carousel.Caption className="carousel-caption">
                     <h3 className="carousel-caption-h3">Studied</h3>
