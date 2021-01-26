@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.scss';
+import { Background } from 'react-parallax';
 
 
-ReactDOM.render(<App style="background-color: $darkgrey ;"/>, document.getElementById('root'));
+ReactDOM.render(<App/>, document.getElementById('root'));
