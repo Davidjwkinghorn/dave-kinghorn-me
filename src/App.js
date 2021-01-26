@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import NavBar from "./NavBar";
 import HomePage from "./pages/HomePage";
 import ContactMe from "./pages/ContactMe";
@@ -10,15 +10,14 @@ import WorkHistory from "./pages/WorkHistory";
 import {ParallaxProvider} from "react-scroll-parallax";
 import { IconContext } from "react-icons";
 import { Row, Col, Container } from 'react-bootstrap';
-import { ListGroup } from 'react-bootstrap';
 import './App.scss';
 
 
-class Footer extends Component {
-    renter() {
-        return ;
-    }
-}
+// class Footer extends Component {
+//     renter() {
+//         return ;
+//     }
+// }
 
 export default class App extends Component {
     render() {
