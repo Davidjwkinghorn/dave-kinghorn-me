@@ -30,6 +30,7 @@ export default class App extends Component {
                             <div><NavBar/></div>
                             <div>
                                 <Route exact path={"/"} component={HomePage}/>
+                                <Route path={"/Courses"} component={Courses}/>
                                 <Route path={"/ContactMe"} component={ContactMe}/>
                                 <Route path={"/Projects"} component={Projects}/>
                                 <Route path={"/Publications"} component={Publications}/>
