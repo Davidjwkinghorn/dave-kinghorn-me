@@ -42,23 +42,30 @@ class HomeCarousel extends React.Component {
     this.carouselDBQuery = {
       carouselItems: [
         {
-          image: process.env.PUBLIC_URL + "/assets/images/london.jpg",
+          image:
+            process.env.PUBLIC_URL +
+            "/assets/images/my-photos/20150730_125815_Richtone(HDR).jpg",
           caption1: "Born",
           caption2: "in England.",
-          altText: "London Cityscape at night.",
+          altText: "Greater London area countryside from the air.",
         },
         {
-          image: process.env.PUBLIC_URL + "/assets/images/lexington1.jpg",
+          image:
+            process.env.PUBLIC_URL +
+            "/assets/images/my-photos/20131106_155432.jpg",
           caption1: "Raised",
-          caption2: "in Lexington, Massachusetts.",
-          altText: "A sunny day in Lexington, Massachusetts' Depot Square.",
+          caption2: "in Massachusetts.",
+          altText: "Autum rooftop from the deCordova Sculpture Park Museum.",
         },
         {
-          image: process.env.PUBLIC_URL + "/assets/images/rit.jpg",
+          image:
+            process.env.PUBLIC_URL +
+            "/assets/images/my-photos/IMG_20160316_192059.jpg",
           caption1: "Studied",
           caption2:
             "Software Engineering at the Rochester Institute of Technology.",
-          altText: "Rochester Institute of Technology",
+          altText:
+            "Rochester Institute of Technology Gene Polisseni Center at sunset.",
         },
       ],
     };
@@ -66,55 +73,18 @@ class HomeCarousel extends React.Component {
 
   createCarouselItem(carouselItem) {
     return (
-      <>
-        <Carousel.Item className="carousel-item">
-          <img
-            className="d-block w-100"
-            id="carousel-image"
-            src={
-              process.env.PUBLIC_URL +
-              "/assets/images/my-photos/20150730_125815_Richtone(HDR).jpg"
-            }
-            alt="Greater London area countryside from the air."
-          />
-          <Carousel.Caption>
-            <h3 className="carousel-caption-h3">Born</h3>
-            <p className="carousel-caption-p">in England.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            id="carousel-image"
-            src={
-              process.env.PUBLIC_URL +
-              "/assets/images/my-photos/20131106_155432.jpg"
-            }
-            alt="Autum rooftop from the deCordova Sculpture Park Museum."
-          />
-          <Carousel.Caption>
-            <h3 className="carousel-caption-h3">Raised</h3>
-            <p className="carousel-caption-p">in Massachusetts.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            id="carousel-image"
-            src={
-              process.env.PUBLIC_URL +
-              "/assets/images/my-photos/IMG_20160316_192059.jpg"
-            }
-            alt="Rochester Institute of Technology Gene Polisseni Center at sunset"
-          />
-          <Carousel.Caption className="carousel-caption">
-            <h3 className="carousel-caption-h3">Studied</h3>
-            <p className="carousel-caption-p">
-              Software Engineering at the Rochester Institute of Technology.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </>
+      <Carousel.Item className="carousel-item">
+        <img
+          className="d-block w-100"
+          id="carousel-image"
+          src={carouselItem["image"]}
+          alt={carouselItem["altText"]}
+        />
+        <Carousel.Caption>
+          <h3 className="carousel-caption-h3">{carouselItem["caption1"]}</h3>
+          <p className="carousel-caption-p">{carouselItem["caption2"]}.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
     );
   }
 
