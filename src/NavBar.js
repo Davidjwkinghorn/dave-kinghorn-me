@@ -15,8 +15,8 @@ export default class NavBar extends React.Component {
                     {/*<Nav.Link href={process.env.PUBLIC_URL + "/Publications"}>Publications</Nav.Link>*/}
                     <Nav.Link href={process.env.PUBLIC_URL + '/Courses'}>Courses</Nav.Link>
                     <Nav.Link href={process.env.PUBLIC_URL + '/assets/documents/Dave_Whitman-Kinghorn_Resume.pdf'}>Resume</Nav.Link>
-                    <Nav.Link href={'https://www.linkedin.com/in/davewk/'}>LinkedIn</Nav.Link>
-                    <Nav.Link href={'https://github.com/Davidjwkinghorn'}>GitHub</Nav.Link>
+                    <Nav.Link href={"https://www.linkedin.com/in/davewk/"}>LinkedIn</Nav.Link>
+                    <Nav.Link href={"https://github.com/Davidjwkinghorn"}>GitHub</Nav.Link>
                     {/*<Nav.Link href={process.env.PUBLIC_URL + "/ContactMe"}>Contact Me</Nav.Link>*/}
                 </Nav>
             </Navbar>
