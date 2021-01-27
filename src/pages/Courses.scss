@@ -1,6 +1,3 @@
-#element.style{
-    background-color:blue;
-  }
 
 .generic-header{
     cursor: pointer;
@@ -23,4 +20,15 @@
 
 .card-body{
     background-color:blue;
+}
+
+.course-card {
+    height: auto;
+    width: 250px;
+    margin: 10px;
+    padding: 10px;
+}
+
+#CourseSection {
+    width: 1000px;
 }
