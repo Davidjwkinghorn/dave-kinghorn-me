@@ -32,8 +32,8 @@ export default class App extends Component {
                 <Route path={"/Publications"} component={Publications} />
                 <Route path={"/WorkHistory"} component={WorkHistory} />
               </div>
-              <div class="d-flex flex-column">
-                <footer class="footer">
+              <div className="d-flex flex-column">
+                <footer className="footer">
                   <Container>
                     <Row>
                       <Col style={{ textAlign: "center" }}>

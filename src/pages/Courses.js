@@ -1,10 +1,19 @@
 import React from "react";
-import { Card, Col, Row } from "react-bootstrap";
+import {
+  Card,
+  CardColumns,
+  CardGroup,
+  CardDeck,
+  Col,
+  Row,
+} from "react-bootstrap";
 import "./Courses.scss";
 
 class GenericCollapsibleSection extends React.Component {
   constructor(props) {
     super(props);
+
+    this.className = props.className;
 
     this.state = {
       open: false,
@@ -18,7 +27,7 @@ class GenericCollapsibleSection extends React.Component {
 
   render() {
     return (
-      <div className="generic-collapsible-section">
+      <div className={this.className}>
         <div onClick={(e) => this.togglePanel(e)} className="generic-header">
           {this.props.title}
         </div>
@@ -30,21 +39,18 @@ class GenericCollapsibleSection extends React.Component {
   }
 }
 
-class CourseCard extends React.Component {}
-
-class CourseSection extends React.Component {
+class CourseCard extends React.Component {
   constructor(props) {
     super(props);
 
     this.title = props.title;
-    this.children = props.children;
+
+    this.courseData = props.courseData;
 
     this.state = {
       open: false,
     };
     this.togglePanel = this.togglePanel.bind(this);
-
-    this.coursesDBQuery = props.coursesDBQuery;
 
     this.colorCode = {
       SWEN: "blue",
@@ -71,12 +77,12 @@ class CourseSection extends React.Component {
     this.setState({ open: !this.state.open });
   }
 
-  createCard(courseData) {
-    const key = courseData["department"] + "-" + courseData["number"];
+  render() {
+    const key = this.courseData["department"] + "-" + this.courseData["number"];
     // TODO: select card background color based on course department.
     var bgColor;
-    if (courseData["department"] in this.colorCode) {
-      bgColor = this.colorCode[courseData["department"]];
+    if (this.courseData["department"] in this.colorCode) {
+      bgColor = this.colorCode[this.courseData["department"]];
     } else {
       bgColor = "blue";
     }
@@ -87,27 +93,44 @@ class CourseSection extends React.Component {
         style={{ backgroundColor: bgColor }}
         key={key}
       >
-        <Card.Img variant="top" src={courseData["icon"]} />
+        <Card.Img variant="top" src={this.courseData["icon"]} />
         <Card.Body style={{ backgroundColor: bgColor }}>
-          <Card.Title>{courseData["title"]}</Card.Title>
+          <Card.Title>{this.courseData["title"]}</Card.Title>
           <GenericCollapsibleSection title="Read more...">
             <Card.Subtitle>
-              {courseData["department"] - courseData["number"]}
+              {this.courseData["department"] - this.courseData["number"]}
             </Card.Subtitle>
-            <Card.Text>{courseData["description"]}</Card.Text>
+            <Card.Text>{this.courseData["description"]}</Card.Text>
           </GenericCollapsibleSection>
         </Card.Body>
       </Card>
     );
   }
+}
+
+class CourseSection extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.title = props.title;
+    this.children = props.children;
+
+    this.coursesDBQuery = props.coursesDBQuery;
+  }
 
   render() {
     return (
-      <GenericCollapsibleSection title={this.title} children={this.children}>
-        {this.coursesDBQuery.map((courseData) =>
-          this.createCard(courseData)
-        )}
-      </GenericCollapsibleSection>
+      <CardDeck>
+        <GenericCollapsibleSection
+          className="course-section"
+          title={this.title}
+          children={this.children}
+        >
+          {this.coursesDBQuery.map((courseData) => (
+            <CourseCard courseData={courseData} />
+          ))}
+        </GenericCollapsibleSection>
+      </CardDeck>
     );
   }
 }
@@ -502,33 +525,41 @@ export default class Courses extends React.Component {
     return (
       <>
         <Col>
-          <Row>
-            <CourseSection
-              title="Core Courses"
-              togglePanel="true"
-              coursesDBQuery={this.coursesDBQuery.filter(
-                (element) => element.category == "Core Classes"
-              )}
-            ></CourseSection>
-          </Row>
-          <Row>
-            <CourseSection
-              title="Foundation Courses"
-              togglePanel="true"
-              coursesDBQuery={this.coursesDBQuery.filter(
-                (element) => element.category == "Foundation Classes"
-              )}
-            ></CourseSection>
-          </Row>
-          <Row>
-            <CourseSection
-              title="MISC Courses"
-              togglePanel="true"
-              coursesDBQuery={this.coursesDBQuery.filter(
-                (element) => element.category !== "Core Classes" && element.category !== "Foundation Classes"
-              )}
-            ></CourseSection>
-          </Row>
+          <div>
+            <CardColumns>
+              <CourseSection
+                title="Core Courses"
+                togglePanel="true"
+                coursesDBQuery={this.coursesDBQuery.filter(
+                  (element) => element.category == "Core Classes"
+                )}
+              />
+            </CardColumns>
+          </div>
+          <div>
+            <CardColumns>
+              <CourseSection
+                title="Foundation Courses"
+                togglePanel="true"
+                coursesDBQuery={this.coursesDBQuery.filter(
+                  (element) => element.category == "Foundation Classes"
+                )}
+              />
+            </CardColumns>
+          </div>
+          <div>
+            <CardColumns>
+              <CourseSection
+                title="MISC Courses"
+                togglePanel="true"
+                coursesDBQuery={this.coursesDBQuery.filter(
+                  (element) =>
+                    element.category !== "Core Classes" &&
+                    element.category !== "Foundation Classes"
+                )}
+              />
+            </CardColumns>
+          </div>
         </Col>
       </>
     );
