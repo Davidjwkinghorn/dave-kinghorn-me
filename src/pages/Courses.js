@@ -21,6 +21,9 @@ class GenericCollapsibleSection extends React.Component {
     this.state = {
       open: false,
     };
+    if ("state" in props) {
+      this.state = props.state;
+    }
     this.togglePanel = this.togglePanel.bind(this);
   }
 
@@ -50,11 +53,6 @@ class CourseCard extends React.Component {
 
     this.courseData = props.courseData;
 
-    this.state = {
-      open: false,
-    };
-    this.togglePanel = this.togglePanel.bind(this);
-
     this.colorCode = {
       SWEN: pastelblue,
       CSCI: pastelgreen,
@@ -75,10 +73,6 @@ class CourseCard extends React.Component {
       WMAR: pastelred,
       WHWS: pastelred,
     };
-  }
-
-  togglePanel(e) {
-    this.setState({ open: !this.state.open });
   }
 
   render() {
@@ -128,6 +122,7 @@ class CourseSection extends React.Component {
       <GenericCollapsibleSection
         className="course-section"
         headerClass="section-header"
+        state={{open: true}}
         title={this.title}
         children={this.children}
       >
@@ -534,7 +529,6 @@ export default class Courses extends React.Component {
           <div>
             <CourseSection
               title="Core Courses"
-              togglePanel="true"
               coursesDBQuery={this.coursesDBQuery.filter(
                 (element) => element.category == "Core Classes"
               )}
@@ -543,7 +537,6 @@ export default class Courses extends React.Component {
           <div>
             <CourseSection
               title="Foundation Courses"
-              togglePanel="true"
               coursesDBQuery={this.coursesDBQuery.filter(
                 (element) => element.category == "Foundation Classes"
               )}
@@ -552,7 +545,6 @@ export default class Courses extends React.Component {
           <div>
             <CourseSection
               title="MISC Courses"
-              togglePanel="true"
               coursesDBQuery={this.coursesDBQuery.filter(
                 (element) =>
                   element.category !== "Core Classes" &&
