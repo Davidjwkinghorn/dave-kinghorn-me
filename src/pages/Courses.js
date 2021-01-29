@@ -6,8 +6,19 @@ import {
   CardDeck,
   Col,
   Row,
+  Container,
 } from "react-bootstrap";
-import {darkgrey, grey, lightgrey, pastelred, pastelorange, pastelyellow, pastelgreen, pastelblue, pastelpurple} from "../styles.scss";
+import {
+  darkgrey,
+  grey,
+  lightgrey,
+  pastelred,
+  pastelorange,
+  pastelyellow,
+  pastelgreen,
+  pastelblue,
+  pastelpurple,
+} from "../styles.scss";
 import "./Courses.scss";
 
 class GenericCollapsibleSection extends React.Component {
@@ -34,7 +45,7 @@ class GenericCollapsibleSection extends React.Component {
   render() {
     return (
       <div className={this.className}>
-        <div onClick={(e) => this.togglePanel(e)} className={this.headerClass} >
+        <div onClick={(e) => this.togglePanel(e)} className={this.headerClass}>
           {this.props.title}
         </div>
         {this.state.open ? (
@@ -84,8 +95,6 @@ class CourseCard extends React.Component {
       bgColor = lightgrey;
     }
 
-
-
     return (
       <Card
         className="course-card"
@@ -95,7 +104,11 @@ class CourseCard extends React.Component {
         <Card.Img variant="top" src={this.courseData["icon"]} />
         <Card.Body style={{ backgroundColor: bgColor }}>
           <Card.Title>{this.courseData["title"]}</Card.Title>
-          <GenericCollapsibleSection className="read-more" title="Read more..." headerClass="read-more-header" >
+          <GenericCollapsibleSection
+            className="read-more"
+            title="Read more..."
+            headerClass="read-more-header"
+          >
             <Card.Subtitle>
               {this.courseData["department"] - this.courseData["number"]}
             </Card.Subtitle>
@@ -122,7 +135,7 @@ class CourseSection extends React.Component {
       <GenericCollapsibleSection
         className="course-section"
         headerClass="section-header"
-        state={{open: true}}
+        state={{ open: true }}
         title={this.title}
         children={this.children}
       >
@@ -140,7 +153,7 @@ export default class Courses extends React.Component {
   constructor(props) {
     super(props);
 
-    // Placeholder for database query
+    // Placeholder for database query. Will move to seperate file soon.
     this.coursesDBQuery = [
       {
         title: "Senior Project II",
