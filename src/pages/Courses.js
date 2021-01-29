@@ -120,17 +120,17 @@ class CourseSection extends React.Component {
 
   render() {
     return (
-      <CardDeck>
-        <GenericCollapsibleSection
-          className="course-section"
-          title={this.title}
-          children={this.children}
-        >
+      <GenericCollapsibleSection
+        className="course-section"
+        title={this.title}
+        children={this.children}
+      >
+        <CardColumns>
           {this.coursesDBQuery.map((courseData) => (
             <CourseCard courseData={courseData} />
           ))}
-        </GenericCollapsibleSection>
-      </CardDeck>
+        </CardColumns>
+      </GenericCollapsibleSection>
     );
   }
 }
@@ -526,39 +526,33 @@ export default class Courses extends React.Component {
       <>
         <Col>
           <div>
-            <CardColumns>
-              <CourseSection
-                title="Core Courses"
-                togglePanel="true"
-                coursesDBQuery={this.coursesDBQuery.filter(
-                  (element) => element.category == "Core Classes"
-                )}
-              />
-            </CardColumns>
+            <CourseSection
+              title="Core Courses"
+              togglePanel="true"
+              coursesDBQuery={this.coursesDBQuery.filter(
+                (element) => element.category == "Core Classes"
+              )}
+            />
           </div>
           <div>
-            <CardColumns>
-              <CourseSection
-                title="Foundation Courses"
-                togglePanel="true"
-                coursesDBQuery={this.coursesDBQuery.filter(
-                  (element) => element.category == "Foundation Classes"
-                )}
-              />
-            </CardColumns>
+            <CourseSection
+              title="Foundation Courses"
+              togglePanel="true"
+              coursesDBQuery={this.coursesDBQuery.filter(
+                (element) => element.category == "Foundation Classes"
+              )}
+            />
           </div>
           <div>
-            <CardColumns>
-              <CourseSection
-                title="MISC Courses"
-                togglePanel="true"
-                coursesDBQuery={this.coursesDBQuery.filter(
-                  (element) =>
-                    element.category !== "Core Classes" &&
-                    element.category !== "Foundation Classes"
-                )}
-              />
-            </CardColumns>
+            <CourseSection
+              title="MISC Courses"
+              togglePanel="true"
+              coursesDBQuery={this.coursesDBQuery.filter(
+                (element) =>
+                  element.category !== "Core Classes" &&
+                  element.category !== "Foundation Classes"
+              )}
+            />
           </div>
         </Col>
       </>

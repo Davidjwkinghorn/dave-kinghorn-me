@@ -18,8 +18,10 @@
     font-size: 14px;
 }
 
-.card-body{
-    background-color:blue;
+.course-section {
+    margin: 0px 50px;
+    padding: 50px;
+    width: 100%;
 }
 
 .course-card {
@@ -29,8 +31,6 @@
     padding: 10px;
 }
 
-.course-section {
-    margin: 0px 50px;
-    padding: 50px;
-    width: 100%;
+.card-body{
+    background-color:blue;
 }
