@@ -3,10 +3,36 @@
 // Variables
 
 // Colours
-$darkblue: #00004b;
+// Greys
 $darkgrey: rgb(52, 58, 64);
 $grey: grey;
 $lightgrey: lightgrey;
+
+// Primary
+$darkblue: #00004b;
+
+// Pastels
+$pastelred: #e5707e;
+$pastelorange: #e08f62;
+$pastelyellow: #faf0af;
+$pastelgreen: #c6ebc9;
+$pastelblue: #a7c5eb;
+$pastelpurple: #949cdf;
+
+:export {
+  darkgrey: $darkgrey;
+  grey: $grey;
+  lightgrey: $lightgrey;
+  
+  darkblue: $darkblue;
+
+  pastelred: $pastelred;
+  pastelorange: $pastelorange;
+  pastelyellow: $pastelyellow;
+  pastelgreen: $pastelgreen;
+  pastelblue: $pastelblue;
+  pastelpurple: $pastelpurple;
+}
 
 // Fonts
 @font-face {
@@ -17,8 +43,8 @@ $defaultFont: "Roboto", "Open Sans", sans-serif;
 
 body {
   height: 100%;
-  background-color: $darkgrey ;
-  margin: 0 auto ;
+  background-color: $darkgrey;
+  margin: 0 auto;
   font-family: $defaultFont;
   color: $lightgrey;
 }

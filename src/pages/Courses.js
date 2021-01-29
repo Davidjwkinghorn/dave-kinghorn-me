@@ -7,6 +7,7 @@ import {
   Col,
   Row,
 } from "react-bootstrap";
+import {darkgrey, grey, lightgrey, pastelred, pastelorange, pastelyellow, pastelgreen, pastelblue, pastelpurple} from "../styles.scss";
 import "./Courses.scss";
 
 class GenericCollapsibleSection extends React.Component {
@@ -14,6 +15,8 @@ class GenericCollapsibleSection extends React.Component {
     super(props);
 
     this.className = props.className;
+
+    this.headerClass = props.headerClass;
 
     this.state = {
       open: false,
@@ -28,7 +31,7 @@ class GenericCollapsibleSection extends React.Component {
   render() {
     return (
       <div className={this.className}>
-        <div onClick={(e) => this.togglePanel(e)} className="generic-header">
+        <div onClick={(e) => this.togglePanel(e)} className={this.headerClass} >
           {this.props.title}
         </div>
         {this.state.open ? (
@@ -53,23 +56,24 @@ class CourseCard extends React.Component {
     this.togglePanel = this.togglePanel.bind(this);
 
     this.colorCode = {
-      SWEN: "blue",
-      CSCI: "red",
-      PHYS: "blue",
-      MATH: "blue",
-      STAT: "blue",
-      MGMT: "blue",
-      STSO: "blue",
-      ENVS: "blue",
-      HIST: "blue",
-      PSYC: "blue",
-      FNRT: "blue",
-      SOCI: "blue",
-      COMM: "blue",
-      UWRT: "blue",
-      WFIT: "blue",
-      WMAR: "blue",
-      WHWS: "blue",
+      SWEN: pastelblue,
+      CSCI: pastelgreen,
+      PHYS: pastelorange,
+      MATH: pastelyellow,
+      STAT: pastelyellow,
+      MGMT: pastelred,
+      STSO: pastelgreen,
+      ENVS: pastelgreen,
+      HIST: pastelyellow,
+      PSYC: "lightblue",
+      FNRT: "lightblue",
+      SOCI: "lightblue",
+      COMM: pastelorange,
+      UWRT: pastelorange,
+      HSPT: pastelyellow,
+      WFIT: pastelred,
+      WMAR: pastelred,
+      WHWS: pastelred,
     };
   }
 
@@ -79,13 +83,14 @@ class CourseCard extends React.Component {
 
   render() {
     const key = this.courseData["department"] + "-" + this.courseData["number"];
-    // TODO: select card background color based on course department.
     var bgColor;
     if (this.courseData["department"] in this.colorCode) {
       bgColor = this.colorCode[this.courseData["department"]];
     } else {
-      bgColor = "blue";
+      bgColor = lightgrey;
     }
+
+
 
     return (
       <Card
@@ -96,7 +101,7 @@ class CourseCard extends React.Component {
         <Card.Img variant="top" src={this.courseData["icon"]} />
         <Card.Body style={{ backgroundColor: bgColor }}>
           <Card.Title>{this.courseData["title"]}</Card.Title>
-          <GenericCollapsibleSection title="Read more...">
+          <GenericCollapsibleSection className="read-more" title="Read more..." headerClass="read-more-header" >
             <Card.Subtitle>
               {this.courseData["department"] - this.courseData["number"]}
             </Card.Subtitle>
@@ -122,6 +127,7 @@ class CourseSection extends React.Component {
     return (
       <GenericCollapsibleSection
         className="course-section"
+        headerClass="section-header"
         title={this.title}
         children={this.children}
       >
@@ -179,7 +185,7 @@ export default class Courses extends React.Component {
         number: "549",
         icon: "",
         description: "",
-        category: "Core Classes",
+        category: "Elective",
       },
       {
         title: "Human Centered Requirements and Design",
@@ -524,7 +530,7 @@ export default class Courses extends React.Component {
   render() {
     return (
       <>
-        <Col>
+        <Col className="main-column">
           <div>
             <CourseSection
               title="Core Courses"
