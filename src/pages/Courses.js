@@ -2,22 +2,15 @@ import React from "react";
 import {
   Card,
   CardColumns,
-  CardGroup,
-  CardDeck,
   Col,
-  Row,
-  Container,
 } from "react-bootstrap";
 import {
-  darkgrey,
-  grey,
   lightgrey,
   pastelred,
   pastelorange,
   pastelyellow,
   pastelgreen,
   pastelblue,
-  pastelpurple,
 } from "../styles.scss";
 import "./Courses.scss";
 
