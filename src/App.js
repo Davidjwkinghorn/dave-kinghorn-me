@@ -47,7 +47,7 @@ export default class App extends Component {
                       <Col style={{ textAlign: "center" }}>
                         <Row>
                           <Col>
-                            <a href="mailto:davidreact@gmail.com?subject=I'd Like to Give You a Job!">
+                            <a href="mailto:davidreact@gmail.com">
                               <i
                                 className="social"
                                 style={{
