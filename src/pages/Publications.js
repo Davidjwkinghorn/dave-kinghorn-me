@@ -1,12 +1,11 @@
-import React from 'react';
-
+import React from "react";
 
 export default class Publications extends React.Component {
-    render() {
-        return (
-            <>
-                <h1>Publications</h1>
-            </>
-        );
-    }
+  render() {
+    return (
+      <>
+        <h1>Publications</h1>
+      </>
+    );
+  }
 }

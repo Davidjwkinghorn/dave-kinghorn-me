@@ -1,0 +1,51 @@
+@import "../styles.scss";
+
+.main-column {
+    margin: 0px 50px 50px 0px;
+}
+
+.section-header {
+    cursor: pointer;
+    background-color: $lightgrey;
+    padding: 15px;
+    color: $darkgrey;
+}
+
+.section-content {
+    cursor: pointer;
+    border-radius: 0;
+    margin: 15px;
+    padding: 0px;
+    font-size: 14px;
+}
+
+.course-section {
+    margin: 0 auto;
+    padding: 50px 50px;
+    width: 100%;
+}
+
+.course-card {
+    color: $darkgrey;
+    height: auto;
+}
+
+.card-body {
+    background-color:blue;
+}
+
+.read-more-header {
+    cursor: pointer;
+    background-color: $darkgrey;
+    padding: 15px;
+    color: $lightgrey;
+}
+
+.read-more-content {
+    cursor: pointer;
+    background-color: $darkgrey;
+    color: $lightgrey;
+    border-radius: 0;
+    padding: 15px;
+    font-size: 14px;
+}
