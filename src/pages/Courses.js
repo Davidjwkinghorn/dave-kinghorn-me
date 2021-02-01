@@ -496,7 +496,7 @@ export default class Courses extends React.Component {
       {
         title: "Introduction to Music",
         department: "FNRT",
-        number: "",
+        number: "110",
         icon: "",
         description: "",
         category: "General Education",
