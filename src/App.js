@@ -6,7 +6,7 @@ import ContactMe from "./pages/ContactMe";
 import Projects from "./pages/Projects";
 import Publications from "./pages/Publications";
 import Courses from "./pages/Courses";
-import WorkHistory from "./pages/WorkHistory";
+import WorkExperience from "./pages/WorkExperience";
 import { Row, Col, Container } from "react-bootstrap";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { IconContext } from "react-icons";
@@ -24,13 +24,13 @@ export default class App extends Component {
               <div>
                 <NavBar />
               </div>
-              <div>
+              <div style={{marginTop: "50px", zIndex: "1"}}>
                 <Route exact path={"/"} component={HomePage} />
+                <Route path={"/WorkExperience"} component={WorkExperience} />
                 <Route path={"/Courses"} component={Courses} />
                 <Route path={"/ContactMe"} component={ContactMe} />
                 <Route path={"/Projects"} component={Projects} />
                 <Route path={"/Publications"} component={Publications} />
-                <Route path={"/WorkHistory"} component={WorkHistory} />
               </div>
               <div className="d-flex flex-column">
                 <footer className="footer">
