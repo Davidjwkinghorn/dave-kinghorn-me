@@ -24,7 +24,7 @@ export default class App extends Component {
               <div>
                 <NavBar />
               </div>
-              <div>
+              <div style={{marginTop: "50px", zIndex: "1"}}>
                 <Route exact path={"/"} component={HomePage} />
                 <Route path={"/WorkExperience"} component={WorkExperience} />
                 <Route path={"/Courses"} component={Courses} />
