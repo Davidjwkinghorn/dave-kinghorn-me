@@ -7,9 +7,9 @@ import "react-vertical-timeline-component/style.min.css";
 import "./WorkExperience.scss";
 
 export default class WorkExperience extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   render() {
     return (
