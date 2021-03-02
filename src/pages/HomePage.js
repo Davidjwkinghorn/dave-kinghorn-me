@@ -60,12 +60,12 @@ class HomeCarousel extends React.Component {
         {
           image:
             process.env.PUBLIC_URL +
-            "/assets/images/my-photos/IMG_20160316_192059.jpg",
+            "/assets/images/my-photos/IMG_20170131_085954.jpg",
           caption1: "Studied",
           caption2:
             "Software Engineering at the Rochester Institute of Technology.",
           altText:
-            "Rochester Institute of Technology Gene Polisseni Center at sunset.",
+            "Rochester Institute of Technology tiger statue with orange and black striped sweater.",
         },
       ],
     };
