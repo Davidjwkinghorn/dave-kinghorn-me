@@ -28,6 +28,8 @@ export default class NavBar extends React.Component {
               process.env.PUBLIC_URL +
               "/assets/documents/Dave_Whitman-Kinghorn_Resume_0.1.pdf"
             }
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Resume
           </Nav.Link>
