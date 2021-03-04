@@ -23,6 +23,12 @@ export default class NavBar extends React.Component {
           <Nav.Link href={process.env.PUBLIC_URL + "/Courses"}>
             Courses
           </Nav.Link>
+          <Nav.Link href={"https://www.linkedin.com/in/davewk/"}>
+            LinkedIn
+          </Nav.Link>
+          <Nav.Link href={"https://github.com/Davidjwkinghorn"}>
+            GitHub
+          </Nav.Link>
           <Nav.Link
             href={
               process.env.PUBLIC_URL +
@@ -32,12 +38,6 @@ export default class NavBar extends React.Component {
             rel="noopener noreferrer"
           >
             Resume
-          </Nav.Link>
-          <Nav.Link href={"https://www.linkedin.com/in/davewk/"}>
-            LinkedIn
-          </Nav.Link>
-          <Nav.Link href={"https://github.com/Davidjwkinghorn"}>
-            GitHub
           </Nav.Link>
           {/*<Nav.Link href={process.env.PUBLIC_URL + "/ContactMe"}>Contact Me</Nav.Link>*/}
         </Nav>
