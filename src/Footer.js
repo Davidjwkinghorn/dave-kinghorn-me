@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Component } from "react";
+import { Row, Col, Container } from "react-bootstrap";
 import "./Footer.scss";
 
 export default class Footer extends Component {
