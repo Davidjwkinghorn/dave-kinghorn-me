@@ -2,6 +2,26 @@ import React, { Component } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import "./Footer.scss";
 
+class FooterIcon extends React.Component {
+  constructor(props) {
+    super(props);
+    this.props = props;
+  }
+
+  render() {
+    return (
+      <a href={this.props.href}>
+        <i
+          className={this.props.className}
+          style={{
+            background: this.props.icon,
+          }}
+        />
+      </a>
+    );
+  }
+}
+
 export default class Footer extends Component {
   render() {
     return (
@@ -19,34 +39,25 @@ export default class Footer extends Component {
             <Col style={{ textAlign: "center" }}>
               <Row>
                 <Col>
-                  <a href="mailto:davidreact@gmail.com">
-                    <i
-                      className="social"
-                      style={{
-                        background: `url(${process.env.PUBLIC_URL}/assets/icons/iconmonstr-gmail-4-240.png`,
-                      }}
-                    />
-                  </a>
+                  <FooterIcon
+                    href="mailto:davidreact@gmail.com"
+                    className="social"
+                    icon={`url(${process.env.PUBLIC_URL}/assets/icons/iconmonstr-gmail-4-240.png`}
+                  />
                 </Col>
                 <Col>
-                  <a href="https://www.linkedin.com/in/davewk/">
-                    <i
-                      className="social"
-                      style={{
-                        background: `url(${process.env.PUBLIC_URL}/assets/icons/iconmonstr-linkedin-4-240.png`,
-                      }}
-                    />
-                  </a>
+                  <FooterIcon
+                    href="https://www.linkedin.com/in/davewk/"
+                    className="social"
+                    icon={`url(${process.env.PUBLIC_URL}/assets/icons/iconmonstr-linkedin-4-240.png`}
+                  />
                 </Col>
                 <Col>
-                  <a href="https://github.com/Davidjwkinghorn/">
-                    <i
-                      className="social"
-                      style={{
-                        background: `url(${process.env.PUBLIC_URL}/assets/icons/iconmonstr-github-1-240.png`,
-                      }}
-                    />
-                  </a>
+                  <FooterIcon
+                    href="https://github.com/Davidjwkinghorn/"
+                    className="social"
+                    icon={`url(${process.env.PUBLIC_URL}/assets/icons/iconmonstr-github-1-240.png`}
+                  />
                 </Col>
                 {/* <Col><a href="https://www.facebook.com/DJ.WHitKing/"><i className="social"
                                                     style={{background: `url(${process.env.PUBLIC_URL}/assets/icons/iconmonstr-facebook-4-240.png)`}}/></a></Col> */}
