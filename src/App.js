@@ -12,7 +12,6 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import { IconContext } from "react-icons";
 import "./App.scss";
 
-
 export default class App extends Component {
   render() {
     return (
@@ -25,7 +24,7 @@ export default class App extends Component {
               <div>
                 <NavBar />
               </div>
-              <div style={{marginTop: "50px", zIndex: "1"}}>
+              <div style={{ marginTop: "50px", zIndex: "1" }}>
                 <Route exact path={"/"} component={HomePage} />
                 <Route path={"/WorkExperience"} component={WorkExperience} />
                 <Route path={"/Courses"} component={Courses} />

@@ -32,6 +32,22 @@ export default class WorkExperience extends React.Component {
             date="2019"
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           >
+            <h3 className="vertical-timeline-element-title">Lockheed Martin Event Planning Application</h3>
+            <h4 className="vertical-timeline-element-subtitle">RIT Senior project</h4>
+            <p>
+              Worked on a team of three other Software Engineering students for our senior project to 
+              design and develop a web app to allow employees of Lockheed Martin to create custom drag and 
+              drop social events and send invites to other employees. Tools: AngularJS, GrapesJS, GraphQL, 
+              Apollo.
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+            contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
+            date="2019"
+            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+          >
             <h3 className="vertical-timeline-element-title">
               dave.kinghorn.me created
             </h3>
