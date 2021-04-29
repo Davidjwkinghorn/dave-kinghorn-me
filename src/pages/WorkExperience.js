@@ -58,7 +58,7 @@ export default class WorkExperience extends React.Component {
         date: "2019",
         title: "dave.kinghorn.me",
         subtitle: "This site created",
-        text: "Tools: ReactJS, Javascript, SCSS, HTML, Bootstrap.\n\
+        text: "Tools: ReactJS, Javascript, SCSS, HTML, Bootstrap.\
         Upcoming updates: Site refactor, later moving to a MERN stack utilizing MongoDB, ExpressJS, \
         React, and Node, Projects page, Technology experience page (languages, IDEs etc), Hobby page, \
         Publications page, Contact me page, and Spotify integration",
@@ -66,8 +66,8 @@ export default class WorkExperience extends React.Component {
         date: "2019",
         title: "Air Force Research Lab. Rome, NY",
         subtitle: "Quantum Algorithms Publication",
-        text: "Koch, D., Torrance, A., Kinghorn, D., Patel, S., Wessing, L., & Alsing, P.\n\
-        M. (2019). Simulating Quantum Algorithms Using Fidelity and Coherence\n\
+        text: "Koch, D., Torrance, A., Kinghorn, D., Patel, S., Wessing, L., & Alsing, P.\
+        M. (2019). Simulating Quantum Algorithms Using Fidelity and Coherence\
         Time as Principle Models for Error. arXiv preprint arXiv:1908.04229",
         link: "https://arxiv.org/abs/1908.04229",
         linkText: "Read article",
