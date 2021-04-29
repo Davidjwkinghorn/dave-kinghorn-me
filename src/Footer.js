@@ -5,16 +5,18 @@ import "./Footer.scss";
 class FooterIcon extends React.Component {
   constructor(props) {
     super(props);
-    this.props = props;
+    this.href = props.href;
+    this.className = props.className;
+    this.idcon = props.icon;
   }
 
   render() {
     return (
-      <a href={this.props.href}>
+      <a href={this.href}>
         <i
-          className={this.props.className}
+          className={this.className}
           style={{
-            background: this.props.icon,
+            background: this.icon,
           }}
         />
       </a>
@@ -22,6 +24,7 @@ class FooterIcon extends React.Component {
   }
 }
 
+// TODO: modularize following
 export default class Footer extends Component {
   render() {
     return (
