@@ -1,2 +1,7 @@
 @import "../styles.scss";
 
+.vertical-timeline-element--work {
+    p {
+        white-space: pre-line
+    }
+}
