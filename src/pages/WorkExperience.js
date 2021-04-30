@@ -55,7 +55,7 @@ export default class WorkExperience extends React.Component {
         date: "2019",
         title: "dave.kinghorn.me",
         subtitle: "This site created",
-        text: "Tools: ReactJS, Javascript, SCSS, HTML, Bootstrap. \nUpcoming updates: Site refactor, later moving to a MERN stack utilizing MongoDB, ExpressJS, React, and Node, Projects page, Technology experience page (languages, IDEs etc), Hobby page, Publications page, Contact me page, and Spotify integration",
+        text: "Tools: ReactJS, Javascript, SCSS, HTML, Bootstrap. \nIn progress: Site refactor \nUpcoming updates: Move to MERN stack utilizing MongoDB, ExpressJS, React, and Node, Projects page, Technology experience page (languages, IDEs etc), Hobby page, Publications page, Contact me page, and Spotify integration",
       },{
         date: "2019",
         title: "Air Force Research Lab. Rome, NY",
