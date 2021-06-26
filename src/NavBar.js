@@ -38,7 +38,7 @@ export default class NavBar extends React.Component {
           <Nav.Link
             href={
               process.env.PUBLIC_URL +
-              "/assets/documents/Dave_Whitman-Kinghorn_Resume_0.1.pdf"
+              "/assets/documents/Dave_Whitman-Kinghorn_PO_Resume_2021_1.0.pdf"
             }
             target="_blank"
             rel="noopener noreferrer"
