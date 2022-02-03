@@ -43,7 +43,17 @@ export default class NavBar extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Resume
+            Software Engineer Resume
+          </Nav.Link>
+          <Nav.Link
+            href={
+              process.env.PUBLIC_URL +
+              "/assets/documents/Dave_Whitman-Kinghorn_PM_Resume_1.0.pdf"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Product Manager Resume
           </Nav.Link>
           {/*<Nav.Link href={process.env.PUBLIC_URL + "/ContactMe"}>Contact Me</Nav.Link>*/}
         </Nav>
