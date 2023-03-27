@@ -43,6 +43,16 @@ export default class WorkExperience extends React.Component {
     // Placeholder for database query. Will move to seperate file soon.
     this.workExperienceDBQuery = [
       {
+        date: "2022",
+        title: "Product Manager",
+        subtitle: "Promoted to Manager at MassEnergize.",
+        text: "Given the chance to shape my role, I worked with the dev team to adhear to industry best practices and refine our process."
+      },{
+        date: "2021",
+        title: "Joined the MassEnergize Team.",
+        subtitle: "Software Engineer",
+        text: "Started as a part time volunteer and later hired as a full time Software Engineer."
+      },{
         date: "2020",
         title: "Bachelor’s degree, Software Engineering.",
         subtitle: "Rochester Institute of Technology",
