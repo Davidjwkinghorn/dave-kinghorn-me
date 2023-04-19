@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "ajv": "^6.12.6",
     "bootstrap": "^4.6.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^8.0.0",
     "react": "^16.14.0",
     "react-animations": "^1.0.0",
     "react-bootstrap": "^1.4.3",
