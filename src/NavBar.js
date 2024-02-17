@@ -18,6 +18,7 @@ export default class NavBar extends React.Component {
         <Nav>
           <Nav.Link href={process.env.PUBLIC_URL + "/"}>Home</Nav.Link>
           <Nav.Link href={process.env.PUBLIC_URL + "/WorkExperience"}>Work Experience</Nav.Link>
+          <Nav.Link href={process.env.PUBLIC_URL + "/Wine"}>Wine</Nav.Link>
           {/*<Nav.Link href={process.env.PUBLIC_URL + "/Projects"}>Projects</Nav.Link>*/}
           {/*<Nav.Link href={process.env.PUBLIC_URL + "/Publications"}>Publications</Nav.Link>*/}
           <Nav.Link href={process.env.PUBLIC_URL + "/Courses"}>

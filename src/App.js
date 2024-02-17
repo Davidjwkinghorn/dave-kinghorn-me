@@ -8,6 +8,7 @@ import Projects from "./pages/Projects";
 import Publications from "./pages/Publications";
 import Courses from "./pages/Courses";
 import WorkExperience from "./pages/WorkExperience";
+import Wine from "./pages/Wine";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { IconContext } from "react-icons";
 import "./App.scss";
@@ -27,6 +28,7 @@ export default class App extends Component {
               <div style={{ marginTop: "50px", zIndex: "1" }}>
                 <Route exact path={"/"} component={HomePage} />
                 <Route path={"/WorkExperience"} component={WorkExperience} />
+                <Route path={"/Wine"} component={Wine} />
                 <Route path={"/Courses"} component={Courses} />
                 <Route path={"/ContactMe"} component={ContactMe} />
                 <Route path={"/Projects"} component={Projects} />
