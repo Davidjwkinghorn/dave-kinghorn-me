@@ -4,15 +4,17 @@ import {
   CardColumns,
   Col,
 } from "react-bootstrap";
-import {
+import styles from "../styles.module.scss";
+import "./Courses.scss";
+
+const {
   lightgrey,
   pastelred,
   pastelorange,
   pastelyellow,
   pastelgreen,
   pastelblue,
-} from "../styles.scss";
-import "./Courses.scss";
+} = styles;
 
 class GenericCollapsibleSection extends React.Component {
   constructor(props) {
