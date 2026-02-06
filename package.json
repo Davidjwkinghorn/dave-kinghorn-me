@@ -23,6 +23,7 @@
     "yarn": "^1.22.22"
   },
   "scripts": {
+    "postinstall": "node scripts/create-ajv-shim.js",
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
